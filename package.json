@@ -1,5 +1,5 @@
 {
-  "name": "linkify",
+  "name": "cayus-ai",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,6 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.1.4",
     "@hookform/resolvers": "^3.6.0",
     "@prisma/client": "^5.15.0",
     "@radix-ui/react-accordion": "^1.1.2",

@@ -1,7 +1,3 @@
-// auth
-import SignInForm from "./auth/signin-form";
-import SignUpForm from "./auth/signup-form";
-
 // global
 import { Icons } from "./global/icons";
 import MaxWidthWrapper from "./global/max-width-wrapper";
@@ -25,9 +21,6 @@ import Blogs from "./blog/blogs";
 
 
 export {
-    SignInForm,
-    SignUpForm,
-
     Icons,
     MaxWidthWrapper,
     AnimationContainer,
