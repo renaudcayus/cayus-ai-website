@@ -1,6 +1,16 @@
 // constants
-import { LIST_ITEM_VARIANTS, CHILD_VARIANTS, FADE_IN_VARIANTS, MODAL_VARIANTS } from "./constants/animation";
-import { DEFAULT_AVATAR_URL, PAGINATION_LIMIT, COMPANIES, PROCESS } from "./constants/misc";
+import {
+  LIST_ITEM_VARIANTS,
+  CHILD_VARIANTS,
+  FADE_IN_VARIANTS,
+  MODAL_VARIANTS,
+} from "./constants/animation";
+import {
+  DEFAULT_AVATAR_URL,
+  PAGINATION_LIMIT,
+  COMPANIES,
+  PROCESS,
+} from "./constants/misc";
 import { NAV_LINKS } from "./constants/nav-links";
 import { aeonik, inter } from "./constants/fonts";
 
@@ -10,21 +20,21 @@ import { isValidUrl } from "./functions/urls";
 import { generateMetadata } from "./functions/metadata";
 
 export {
-    // constants
-    LIST_ITEM_VARIANTS,
-    CHILD_VARIANTS,
-    DEFAULT_AVATAR_URL,
-    FADE_IN_VARIANTS,
-    MODAL_VARIANTS,
-    PAGINATION_LIMIT,
-    NAV_LINKS,
-    COMPANIES,
-    PROCESS,
-    aeonik,
-    inter,
+  // constants
+  LIST_ITEM_VARIANTS,
+  CHILD_VARIANTS,
+  DEFAULT_AVATAR_URL,
+  FADE_IN_VARIANTS,
+  MODAL_VARIANTS,
+  PAGINATION_LIMIT,
+  NAV_LINKS,
+  COMPANIES,
+  PROCESS,
+  aeonik,
+  inter,
 
-    // functions
-    cn,
-    isValidUrl,
-    generateMetadata,
+  // functions
+  cn,
+  isValidUrl,
+  generateMetadata,
 };

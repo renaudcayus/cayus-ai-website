@@ -14,14 +14,12 @@ import Sidebar from "./dashboard/sidebar";
 import DashboardNavbar from "./dashboard/dashboard-navbar";
 
 export {
-    Icons,
-    MaxWidthWrapper,
-    AnimationContainer,
-    Navbar,
-    Footer,
-
-    Providers,
-
-    Sidebar,
-    DashboardNavbar,
+  Icons,
+  MaxWidthWrapper,
+  AnimationContainer,
+  Navbar,
+  Footer,
+  Providers,
+  Sidebar,
+  DashboardNavbar,
 };
