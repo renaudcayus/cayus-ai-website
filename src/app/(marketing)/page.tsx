@@ -15,7 +15,7 @@ import MagicBadge from '@/components/ui/magic-badge';
 import MagicCard from '@/components/ui/magic-card';
 import { COMPANIES, PROCESS } from '@/utils';
 import { REVIEWS } from '@/utils/constants/misc';
-import { ArrowRightIcon, CreditCardIcon, StarIcon } from 'lucide-react';
+import { ArrowRightIcon, StarIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -28,7 +28,7 @@ const HomePage = async () => {
           <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
             <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
               Smart Links with{' '}
-              <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
+              <span className="text-transparent bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text inline-bloc">
                 Precision
               </span>
             </h1>
@@ -57,7 +57,7 @@ const HomePage = async () => {
             <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
               <BorderBeam size={250} duration={12} delay={9} />
               <Image
-                src="/assets/dashboard-dark.svg"
+                src="/assets/dashboard.svg"
                 alt="Dashboard"
                 width={1200}
                 height={1200}
@@ -76,7 +76,7 @@ const HomePage = async () => {
         <AnimationContainer delay={0.4}>
           <div className="py-14">
             <div className="mx-auto px-4 md:px-8">
-              <h2 className="text-center text-sm font-medium font-heading text-neutral-400 uppercase">
+              <h2 className="text-center text-sm font-medium font-heading text-neutral-600 uppercase">
                 Trusted by the best in the industry
               </h2>
               <div className="mt-8">
@@ -250,7 +250,7 @@ const HomePage = async () => {
         <AnimationContainer delay={0.1}>
           <LampContainer>
             <div className="flex flex-col items-center justify-center relative w-full text-center">
-              <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
+              <h2 className="bg-gradient-to-b from-neutral-600 to-neutral-800 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
                 Step into the future of link management
               </h2>
               <p className="text-muted-foreground mt-6 max-w-md mx-auto">

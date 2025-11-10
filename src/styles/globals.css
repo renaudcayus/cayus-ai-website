@@ -4,76 +4,43 @@
 
 @layer base {
   :root {
-    --foreground: 0 0% 98%;
-    --background: 0 0% 3.9%;
+    --background: 0 0% 99%; /* White */
+    --foreground: 0 0% 10.6%; /* #1B1B1B */
 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 10.6%;
 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 0 0% 10.6%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 0 0% 10.6%;
+    --primary-foreground: 0 0% 99%; /* White */
 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 95.3%; /* #F3F3F3 */
+    --secondary-foreground: 0 0% 10.6%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-
-    --tertiary: 0 0% 90%;
-    --tertiary-foreground: 0 0% 9%;
-
-    --subtle: 240 6% 90%;
-    --subtle-foreground: 0 0% 9%;
-
-    --muted: 0 0% 96.1%;
+    --muted: 0 0% 95.3%; /* #F3F3F3 */
     --muted-foreground: 0 0% 45.1%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 0 0% 95.3%; /* #F3F3F3 */
+    --accent-foreground: 0 0% 10.6%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 99%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 0 0% 88.2%; /* #E1E1E1 */
+    --input: 0 0% 88.2%; /* #E1E1E1 */
+    --ring: 207 100% 41.6%; /* #0078D4 */
+
+    --radius: 0.5rem;
+
+    --scrollbar-thumb: #e1e1e1;
+    --scrollbar-track: #f3f3f3;
   }
 }
 
 ::selection {
-  background-color: rgba(168, 85, 247, 0.2);
+  box-shadow: rgba(0, 120, 212, 0.4) 5px 5px;
   color: hsl(var(--foreground));
 }
 
@@ -85,7 +52,7 @@ body {
 .dumy {
   color: hsl(0 0% 98%);
   color: rgb(38, 38, 38);
-  /* @apply to-purple-500 */
+  /* @apply to-blue-500 */
 }
 
 ::-webkit-scrollbar {
@@ -105,15 +72,16 @@ body {
 .gradient {
   background: conic-gradient(
     from 230.29deg at 51.63% 52.16%,
-    rgb(36, 0, 255) 0deg,
-    rgb(0, 135, 255) 67.5deg,
-    rgb(108, 39, 157) 198.75deg,
-    rgb(24, 38, 163) 251.25deg,
-    rgb(54, 103, 196) 301.88deg,
-    rgb(105, 30, 255) 360deg
+    #2563eb 0deg,
+    #3b82f6 60deg,
+    #38bdf8 120deg,
+    #7dd3fc 180deg,
+    #38bdf8 240deg,
+    #3b82f6 300deg,
+    #2563eb 360deg
   );
 }
 
 .not-found {
-  box-shadow: rgba(150, 18, 226, 0.3) 5px 5px;
+  box-shadow: rgba(0, 120, 212, 0.4) 5px 5px; /* Softer glow of your blue */
 }

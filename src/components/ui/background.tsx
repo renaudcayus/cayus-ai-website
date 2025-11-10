@@ -44,7 +44,7 @@ export function Background({
         <svg
           aria-hidden="true"
           className={cn(
-            'pointer-events-none w-full h-full fill-neutral-400/30 stroke-neutral-400/30',
+            'pointer-events-none w-full h-full fill-neutral-600/30 stroke-neutral-600/30',
             className,
           )}
           {...props}

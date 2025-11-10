@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import { AnimationContainer, Icons } from '@/components';
 import { TextHoverEffect } from '@/components/ui/text-hover-effect';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(backgroundColor.white/8%),transparent)]">
+    <footer className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(colors.neutral.500/20%),transparent)]">
       <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
 
       <div className="grid gap-8 xl:grid-cols-3 xl:gap-8 w-full">
@@ -16,7 +16,7 @@ const Footer = () => {
             <p className="text-muted-foreground mt-4 text-sm text-start">
               Manage your links with ease.
             </p>
-            <span className="mt-4 text-neutral-200 text-sm flex items-center">
+            <span className="mt-4 text-neutral-500 text-sm flex items-center">
               Made by{' '}
               <Link href="https://shreyas-sihasane.vercel.app/" className="font-semibold ml-1">
                 Shreyas
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <AnimationContainer delay={0.2}>
               <div className="">
-                <h3 className="text-base font-medium text-white">Product</h3>
+                <h3 className="text-base font-medium">Product</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="mt-2">
                     <Link href="" className="hover:text-foreground transition-all duration-300">
@@ -56,7 +56,7 @@ const Footer = () => {
             </AnimationContainer>
             <AnimationContainer delay={0.3}>
               <div className="mt-10 md:mt-0 flex flex-col">
-                <h3 className="text-base font-medium text-white">Integrations</h3>
+                <h3 className="text-base font-medium">Integrations</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="">
                     <Link href="" className="hover:text-foreground transition-all duration-300">
@@ -85,7 +85,7 @@ const Footer = () => {
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <AnimationContainer delay={0.4}>
               <div className="">
-                <h3 className="text-base font-medium text-white">Resources</h3>
+                <h3 className="text-base font-medium">Resources</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="mt-2">
                     <Link
@@ -108,7 +108,7 @@ const Footer = () => {
             </AnimationContainer>
             <AnimationContainer delay={0.5}>
               <div className="mt-10 md:mt-0 flex flex-col">
-                <h3 className="text-base font-medium text-white">Company</h3>
+                <h3 className="text-base font-medium">Company</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="">
                     <Link href="" className="hover:text-foreground transition-all duration-300">

@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn, NAV_LINKS } from '@/utils';
 import { LucideIcon, Menu, X } from 'lucide-react';

@@ -1,6 +1,5 @@
 'use client';
 
-import { buttonVariants } from '@/components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,12 +10,12 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn, NAV_LINKS } from '@/utils';
-import { LucideIcon, ZapIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MobileNavbar from './mobile-navbar';
-import AnimationContainer from '../global/animation-container';
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -108,15 +107,6 @@ const Navbar = () => {
             </NavigationMenu>
           </div>
 
-          <div className="hidden lg:flex items-center">
-            <div className="flex items-center gap-x-4">
-              <Link href="/auth/sign-up" className={buttonVariants({ size: 'sm' })}>
-                Get Started
-                <ZapIcon className="size-3.5 ml-1.5 text-orange-500 fill-orange-500" />
-              </Link>
-            </div>
-          </div>
-
           <MobileNavbar />
         </MaxWidthWrapper>
       </AnimationContainer>
@@ -140,7 +130,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="flex items-center space-x-2 text-neutral-300">
+          <div className="flex items-center space-x-2 text-neutral-600">
             <Icon className="h-4 w-4" />
             <h6 className="text-sm font-medium !leading-none">{title}</h6>
           </div>
