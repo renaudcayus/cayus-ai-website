@@ -4,20 +4,15 @@ import {
   CHILD_VARIANTS,
   FADE_IN_VARIANTS,
   MODAL_VARIANTS,
-} from "./constants/animation";
-import {
-  DEFAULT_AVATAR_URL,
-  PAGINATION_LIMIT,
-  COMPANIES,
-  PROCESS,
-} from "./constants/misc";
-import { NAV_LINKS } from "./constants/nav-links";
-import { aeonik, inter } from "./constants/fonts";
+} from './constants/animation';
+import { DEFAULT_AVATAR_URL, PAGINATION_LIMIT, COMPANIES, PROCESS } from './constants/misc';
+import { NAV_LINKS } from './constants/nav-links';
+import { aeonik, inter } from './constants/fonts';
 
 // functions
-import { cn } from "./functions/cn";
-import { isValidUrl } from "./functions/urls";
-import { generateMetadata } from "./functions/metadata";
+import { cn } from './functions/cn';
+import { isValidUrl } from './functions/urls';
+import { generateMetadata } from './functions/metadata';
 
 export {
   // constants

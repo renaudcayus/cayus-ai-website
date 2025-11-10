@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { cn } from "@/utils";
-import { Check, Copy, LucideIcon } from "lucide-react";
-import React, { useState } from "react";
-import { toast } from "sonner";
+import { cn } from '@/utils';
+import { Check, Copy, LucideIcon } from 'lucide-react';
+import React, { useState } from 'react';
+import { toast } from 'sonner';
 
 interface Props {
   text: string;
@@ -20,7 +20,7 @@ const CopyButton = ({ text, className, icon }: Props) => {
     e.stopPropagation();
     setIsCopied(true);
     navigator.clipboard.writeText(text).then(() => {
-      toast.success("Copied to clipboard!");
+      toast.success('Copied to clipboard!');
     });
     setTimeout(() => {
       setIsCopied(false);
@@ -30,7 +30,7 @@ const CopyButton = ({ text, className, icon }: Props) => {
   return (
     <button
       className={cn(
-        "flex items-center justify-center group bg-foreground/10 p-2 transition-all duration-100 hover:scale-105 hover:bg-foreground/20 rounded-md active:scale-95",
+        'flex items-center justify-center group bg-foreground/10 p-2 transition-all duration-100 hover:scale-105 hover:bg-foreground/20 rounded-md active:scale-95',
         className,
       )}
     >

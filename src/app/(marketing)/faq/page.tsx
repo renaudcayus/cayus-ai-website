@@ -1,12 +1,12 @@
-import { AnimationContainer, MaxWidthWrapper } from "@/components";
+import { AnimationContainer, MaxWidthWrapper } from '@/components';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import MagicBadge from "@/components/ui/magic-badge";
-import { FAQ } from "@/utils/constants/faq";
+} from '@/components/ui/accordion';
+import MagicBadge from '@/components/ui/magic-badge';
+import { FAQ } from '@/utils/constants/faq';
 
 const FAQPage = () => {
   return (
@@ -18,9 +18,8 @@ const FAQPage = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-base md:text-lg mt-6 text-center text-muted-foreground">
-            Here are some of the most common questions we get asked. If you have
-            a question that isn&apos;t answered here, feel free to reach out to
-            us.
+            Here are some of the most common questions we get asked. If you have a question that
+            isn&apos;t answered here, feel free to reach out to us.
           </p>
         </div>
         <div className="max-w-3xl mx-auto w-full mt-20">

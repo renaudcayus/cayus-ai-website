@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useRouter } from "next/navigation";
-import { useMediaQuery } from "usehooks-ts";
-import { Dialog } from "./dialog";
-import { Drawer } from "./drawer";
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import { useMediaQuery } from 'usehooks-ts';
+import { Dialog } from './dialog';
+import { Drawer } from './drawer';
 
 interface Props {
   children: React.ReactNode;
@@ -26,7 +26,7 @@ const Modal = ({ children, isOpen, setIsOpen, onClose }: Props) => {
     }
   };
 
-  const isDesktop = useMediaQuery("(max-width: 768px)");
+  const isDesktop = useMediaQuery('(max-width: 768px)');
 
   if (isDesktop) {
     return (

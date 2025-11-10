@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { AnimationContainer, Icons } from "@/components";
-import { TextHoverEffect } from "@/components/ui/text-hover-effect";
+import Link from 'next/link';
+import { AnimationContainer, Icons } from '@/components';
+import { TextHoverEffect } from '@/components/ui/text-hover-effect';
 
 const Footer = () => {
   return (
@@ -17,11 +17,8 @@ const Footer = () => {
               Manage your links with ease.
             </p>
             <span className="mt-4 text-neutral-200 text-sm flex items-center">
-              Made by{" "}
-              <Link
-                href="https://shreyas-sihasane.vercel.app/"
-                className="font-semibold ml-1"
-              >
+              Made by{' '}
+              <Link href="https://shreyas-sihasane.vercel.app/" className="font-semibold ml-1">
                 Shreyas
               </Link>
             </span>
@@ -35,34 +32,22 @@ const Footer = () => {
                 <h3 className="text-base font-medium text-white">Product</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Features
                     </Link>
                   </li>
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Pricing
                     </Link>
                   </li>
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Testimonials
                     </Link>
                   </li>
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Integration
                     </Link>
                   </li>
@@ -71,39 +56,25 @@ const Footer = () => {
             </AnimationContainer>
             <AnimationContainer delay={0.3}>
               <div className="mt-10 md:mt-0 flex flex-col">
-                <h3 className="text-base font-medium text-white">
-                  Integrations
-                </h3>
+                <h3 className="text-base font-medium text-white">Integrations</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Facebook
                     </Link>
                   </li>
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Instagram
                     </Link>
                   </li>
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       Twitter
                     </Link>
                   </li>
                   <li className="mt-2">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       LinkedIn
                     </Link>
                   </li>
@@ -140,10 +111,7 @@ const Footer = () => {
                 <h3 className="text-base font-medium text-white">Company</h3>
                 <ul className="mt-4 text-sm text-muted-foreground">
                   <li className="">
-                    <Link
-                      href=""
-                      className="hover:text-foreground transition-all duration-300"
-                    >
+                    <Link href="" className="hover:text-foreground transition-all duration-300">
                       About Us
                     </Link>
                   </li>

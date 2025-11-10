@@ -1,7 +1,7 @@
-import { AnimationContainer, MaxWidthWrapper } from "@/components";
-import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
-import { BorderBeam } from "@/components/ui/border-beam";
-import { Button } from "@/components/ui/button";
+import { AnimationContainer, MaxWidthWrapper } from '@/components';
+import { BentoCard, BentoGrid, CARDS } from '@/components/ui/bento-grid';
+import { BorderBeam } from '@/components/ui/border-beam';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -9,15 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { LampContainer } from "@/components/ui/lamp";
-import MagicBadge from "@/components/ui/magic-badge";
-import MagicCard from "@/components/ui/magic-card";
-import { COMPANIES, PROCESS } from "@/utils";
-import { REVIEWS } from "@/utils/constants/misc";
-import { ArrowRightIcon, CreditCardIcon, StarIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+} from '@/components/ui/card';
+import { LampContainer } from '@/components/ui/lamp';
+import MagicBadge from '@/components/ui/magic-badge';
+import MagicCard from '@/components/ui/magic-card';
+import { COMPANIES, PROCESS } from '@/utils';
+import { REVIEWS } from '@/utils/constants/misc';
+import { ArrowRightIcon, CreditCardIcon, StarIcon } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const HomePage = async () => {
   return (
@@ -27,7 +27,7 @@ const HomePage = async () => {
         <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
           <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
             <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-              Smart Links with{" "}
+              Smart Links with{' '}
               <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
                 Precision
               </span>
@@ -41,7 +41,7 @@ const HomePage = async () => {
             </p>
             <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
               <Button asChild>
-                <Link href={"/dashboard"} className="flex items-center">
+                <Link href={'/dashboard'} className="flex items-center">
                   Start creating for free
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
@@ -109,8 +109,8 @@ const HomePage = async () => {
               Manage Links Like a Pro
             </h2>
             <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-              Cayus is a powerful link management tool that helps you shorten,
-              track, and organize all your links in one place.
+              Cayus is a powerful link management tool that helps you shorten, track, and organize
+              all your links in one place.
             </p>
           </div>
         </AnimationContainer>
@@ -132,8 +132,7 @@ const HomePage = async () => {
               Effortless link management in 3 steps
             </h2>
             <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-              Follow these simple steps to optimize, organize, and share your
-              links with ease.
+              Follow these simple steps to optimize, organize, and share your links with ease.
             </p>
           </div>
         </AnimationContainer>
@@ -142,20 +141,13 @@ const HomePage = async () => {
             <AnimationContainer delay={0.2 * id} key={id}>
               <MagicCard className="group md:py-8">
                 <div className="flex flex-col items-start justify-center w-full">
-                  <process.icon
-                    strokeWidth={1.5}
-                    className="w-10 h-10 text-foreground"
-                  />
+                  <process.icon strokeWidth={1.5} className="w-10 h-10 text-foreground" />
                   <div className="flex flex-col relative items-start">
                     <span className="absolute -top-6 right-0 border-2 border-border text-foreground font-medium text-2xl rounded-full w-12 h-12 flex items-center justify-center pt-0.5">
                       {id + 1}
                     </span>
-                    <h3 className="text-base mt-6 font-medium text-foreground">
-                      {process.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {process.description}
-                    </p>
+                    <h3 className="text-base mt-6 font-medium text-foreground">{process.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{process.description}</p>
                   </div>
                 </div>
               </MagicCard>
@@ -194,10 +186,7 @@ const HomePage = async () => {
                     </CardContent>
                     <CardFooter className="w-full space-x-1 mt-auto">
                       {Array.from({ length: review.rating }, (_, i) => (
-                        <StarIcon
-                          key={i}
-                          className="w-4 h-4 fill-yellow-500 text-yellow-500"
-                        />
+                        <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                       ))}
                     </CardFooter>
                   </Card>
@@ -221,10 +210,7 @@ const HomePage = async () => {
                     </CardContent>
                     <CardFooter className="w-full space-x-1 mt-auto">
                       {Array.from({ length: review.rating }, (_, i) => (
-                        <StarIcon
-                          key={i}
-                          className="w-4 h-4 fill-yellow-500 text-yellow-500"
-                        />
+                        <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                       ))}
                     </CardFooter>
                   </Card>
@@ -248,10 +234,7 @@ const HomePage = async () => {
                     </CardContent>
                     <CardFooter className="w-full space-x-1 mt-auto">
                       {Array.from({ length: review.rating }, (_, i) => (
-                        <StarIcon
-                          key={i}
-                          className="w-4 h-4 fill-yellow-500 text-yellow-500"
-                        />
+                        <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                       ))}
                     </CardFooter>
                   </Card>
@@ -271,9 +254,8 @@ const HomePage = async () => {
                 Step into the future of link management
               </h2>
               <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                Experience the cutting-edge solution that transforms how you
-                handle your links. Elevate your online presence with our
-                next-gen platform.
+                Experience the cutting-edge solution that transforms how you handle your links.
+                Elevate your online presence with our next-gen platform.
               </p>
               <div className="mt-6">
                 <Button>

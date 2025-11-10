@@ -10,13 +10,13 @@ export const isValidUrl = (url: string): boolean => {
 export const getUrlFromText = (text: string): string => {
   if (isValidUrl(text)) return text;
   try {
-    if (text.includes(".") && !text.includes(" ")) {
+    if (text.includes('.') && !text.includes(' ')) {
       return new URL(`https://${text}`).toString();
     }
   } catch (_) {
-    return "";
+    return '';
   }
-  return "";
+  return '';
 };
 
 export const getSearchParams = (url: string): Record<string, string> => {

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { cn } from "@/utils";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { cn } from '@/utils';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
 interface Props {
   src: string;
@@ -33,7 +33,7 @@ const BlurImage = ({ src, alt, className, ...props }: Props) => {
       alt={alt}
       unoptimized
       onLoad={handleLoad}
-      className={cn(isLoading ? "filter blur-sm" : "blur-0", className)}
+      className={cn(isLoading ? 'filter blur-sm' : 'blur-0', className)}
     />
   );
 };

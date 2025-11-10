@@ -1,26 +1,25 @@
-"use client";
+'use client';
 
-import { cn } from "@/utils";
-import { AnimatedBeam } from "@/components/ui/animated-beam";
-import { LucideProps } from "lucide-react";
-import React, { forwardRef, useRef } from "react";
+import { cn } from '@/utils';
+import { AnimatedBeam } from '@/components/ui/animated-beam';
+import { LucideProps } from 'lucide-react';
+import React, { forwardRef, useRef } from 'react';
 
-const Circle = forwardRef<
-  HTMLDivElement,
-  { className?: string; children?: React.ReactNode }
->(function Circle({ className, children }, ref) {
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-});
+const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(
+  function Circle({ className, children }, ref) {
+    return (
+      <div
+        ref={ref}
+        className={cn(
+          'z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]',
+          className,
+        )}
+      >
+        {children}
+      </div>
+    );
+  },
+);
 
 export function Integrations({ className }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,7 +34,7 @@ export function Integrations({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl",
+        'relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl',
         className,
       )}
       ref={containerRef}
@@ -71,42 +70,12 @@ export function Integrations({ className }: { className?: string }) {
       </div>
 
       {/* AnimatedBeams */}
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div1Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div2Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div3Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div4Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div5Ref}
-        toRef={div6Ref}
-        duration={3}
-      />
-      <AnimatedBeam
-        containerRef={containerRef}
-        fromRef={div6Ref}
-        toRef={div7Ref}
-        duration={3}
-      />
+      <AnimatedBeam containerRef={containerRef} fromRef={div1Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div2Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div3Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div4Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div5Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div7Ref} duration={3} />
     </div>
   );
 }
@@ -226,17 +195,8 @@ const Icons = {
           <stop stopColor="#FFFFFF" stopOpacity="0" offset="100%"></stop>
         </radialGradient>
       </defs>
-      <g
-        id="Page-1"
-        stroke="none"
-        strokeWidth="1"
-        fill="none"
-        fillRule="evenodd"
-      >
-        <g
-          id="Consumer-Apps-Docs-Large-VD-R8"
-          transform="translate(-451.000000, -463.000000)"
-        >
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Consumer-Apps-Docs-Large-VD-R8" transform="translate(-451.000000, -463.000000)">
           <g id="Hero" transform="translate(0.000000, 63.000000)">
             <g id="Personal" transform="translate(277.000000, 309.000000)">
               <g id="Docs-icon" transform="translate(174.000000, 91.000000)">
@@ -353,11 +313,7 @@ const Icons = {
     </svg>
   ),
   whatsapp: (props: LucideProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 175.216 175.552"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" {...props}>
       <defs>
         <linearGradient
           id="b"

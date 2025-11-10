@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { cn } from "@/utils";
-import React, { useRef, useState } from "react";
+import { cn } from '@/utils';
+import React, { useRef, useState } from 'react';
 
 interface Props {
   children: React.ReactNode;
@@ -50,7 +50,7 @@ const MagicCard = ({ children, className }: Props) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative max-w-md overflow-hidden rounded-xl border border-border/60 bg-gradient-to-r from-background to-background/40 p-4 md:p-6",
+        'relative max-w-md overflow-hidden rounded-xl border border-border/60 bg-gradient-to-r from-background to-background/40 p-4 md:p-6',
         className,
       )}
     >

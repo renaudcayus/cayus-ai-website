@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 interface AnimationContainerProps {
   children: React.ReactNode;
@@ -9,12 +9,7 @@ interface AnimationContainerProps {
   className?: string;
 }
 
-const AnimationContainer = ({
-  children,
-  className,
-  reverse,
-  delay,
-}: AnimationContainerProps) => {
+const AnimationContainer = ({ children, className, reverse, delay }: AnimationContainerProps) => {
   return (
     <motion.div
       className={className}
@@ -24,8 +19,8 @@ const AnimationContainer = ({
       transition={{
         duration: 0.2,
         delay: delay,
-        ease: "easeInOut",
-        type: "spring",
+        ease: 'easeInOut',
+        type: 'spring',
         stiffness: 260,
         damping: 20,
       }}

@@ -9,8 +9,8 @@
 // };
 
 // export default background
-import { cn } from "@/utils";
-import { useId } from "react";
+import { cn } from '@/utils';
+import { useId } from 'react';
 
 interface Props {
   children: React.ReactNode;
@@ -44,7 +44,7 @@ export function Background({
         <svg
           aria-hidden="true"
           className={cn(
-            "pointer-events-none w-full h-full fill-neutral-400/30 stroke-neutral-400/30",
+            'pointer-events-none w-full h-full fill-neutral-400/30 stroke-neutral-400/30',
             className,
           )}
           {...props}
@@ -58,19 +58,10 @@ export function Background({
               x={x}
               y={y}
             >
-              <path
-                d={`M.5 ${height}V.5H${width}`}
-                fill="none"
-                strokeDasharray={strokeDasharray}
-              />
+              <path d={`M.5 ${height}V.5H${width}`} fill="none" strokeDasharray={strokeDasharray} />
             </pattern>
           </defs>
-          <rect
-            width="100%"
-            height="100%"
-            strokeWidth={0}
-            fill={`url(#${id})`}
-          />
+          <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
           {squares && (
             <svg x={x} y={y} className="overflow-visible">
               {squares.map(([x, y]) => (

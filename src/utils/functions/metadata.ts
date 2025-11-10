@@ -1,24 +1,24 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const generateMetadata = ({
   title = `Cayus - The Link Management Platform for Businesses`,
   description = `Cayus is the link management platform for businesses. It helps you build, brand, and track your links.`,
-  image = "/thumbnail.png",
+  image = '/thumbnail.png',
   icons = [
     {
-      rel: "apple-touch-icon",
-      sizes: "32x32",
-      url: "/apple-touch-icon.png",
+      rel: 'apple-touch-icon',
+      sizes: '32x32',
+      url: '/apple-touch-icon.png',
     },
     {
-      rel: "icon",
-      sizes: "32x32",
-      url: "/favicon-32x32.png",
+      rel: 'icon',
+      sizes: '32x32',
+      url: '/favicon-32x32.png',
     },
     {
-      rel: "icon",
-      sizes: "16x16",
-      url: "/favicon-16x16.png",
+      rel: 'icon',
+      sizes: '16x16',
+      url: '/favicon-16x16.png',
     },
   ],
   noIndex = false,
@@ -26,7 +26,7 @@ export const generateMetadata = ({
   title?: string;
   description?: string;
   image?: string | null;
-  icons?: Metadata["icons"];
+  icons?: Metadata['icons'];
   noIndex?: boolean;
 } = {}): Metadata => ({
   title,
@@ -40,8 +40,8 @@ export const generateMetadata = ({
   twitter: {
     title,
     description,
-    ...(image && { card: "summary_large_image", images: [image] }),
-    creator: "@shreyassihasane",
+    ...(image && { card: 'summary_large_image', images: [image] }),
+    creator: '@shreyassihasane',
   },
   // metadataBase: new URL(process.env.APP_DOMAIN!),
   ...(noIndex && { robots: { index: false, follow: false } }),
