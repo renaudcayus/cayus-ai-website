@@ -33,14 +33,11 @@
     --ring: 207 100% 41.6%; /* #0078D4 */
 
     --radius: 0.5rem;
-
-    --scrollbar-thumb: #e1e1e1;
-    --scrollbar-track: #f3f3f3;
   }
 }
 
 ::selection {
-  box-shadow: rgba(0, 120, 212, 0.4) 5px 5px;
+  background-color: rgba(89, 180, 249, 0.4);
   color: hsl(var(--foreground));
 }
 
