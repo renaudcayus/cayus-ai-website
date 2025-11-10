@@ -19,20 +19,15 @@ import PricingCards from "./pricing-cards";
 // blog
 import Blogs from "./blog/blogs";
 
-
 export {
-    Icons,
-    MaxWidthWrapper,
-    AnimationContainer,
-    Navbar,
-    Footer,
-
-    Providers,
-
-    Sidebar,
-    DashboardNavbar,
-
-    PricingCards,
-
-    Blogs,
+  Icons,
+  MaxWidthWrapper,
+  AnimationContainer,
+  Navbar,
+  Footer,
+  Providers,
+  Sidebar,
+  DashboardNavbar,
+  PricingCards,
+  Blogs,
 };
