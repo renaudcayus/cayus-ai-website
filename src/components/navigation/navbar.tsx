@@ -107,9 +107,11 @@ const Navbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
+          <div className="ml-auto">
+            <LangSelect />
+          </div>
 
           <MobileNavbar />
-          <LangSelect />
         </MaxWidthWrapper>
       </AnimationContainer>
     </header>
