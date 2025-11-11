@@ -13,6 +13,9 @@ import Providers from './providers/providers';
 import Sidebar from './dashboard/sidebar';
 import DashboardNavbar from './dashboard/dashboard-navbar';
 
+// marketing
+import EmailCTA from './marketing/email-cta';
+
 export {
   Icons,
   MaxWidthWrapper,
@@ -22,4 +25,5 @@ export {
   Providers,
   Sidebar,
   DashboardNavbar,
+  EmailCTA,
 };
