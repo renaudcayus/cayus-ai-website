@@ -13,6 +13,7 @@ import {
 import { LampContainer } from '@/components/ui/lamp';
 import MagicBadge from '@/components/ui/magic-badge';
 import MagicCard from '@/components/ui/magic-card';
+import { getI18n, getScopedI18n } from '@/locals/server';
 import { COMPANIES, PROCESS } from '@/utils';
 import { REVIEWS } from '@/utils/constants/misc';
 import { ArrowRightIcon, StarIcon } from 'lucide-react';
@@ -20,24 +21,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const HomePage = async () => {
+  const heroT = await getScopedI18n('hero');
+  const t = await getI18n();
+
   return (
     <div className="overflow-x-hidden scrollbar-hide size-full">
       {/* Hero Section */}
       <MaxWidthWrapper>
         <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
-          <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
+          <AnimationContainer className="capitalize flex flex-col items-center justify-center w-full text-center">
             <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-              Smart Links with{' '}
+              {heroT('title')}{' '}
               <span className="text-transparent bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text inline-bloc">
-                Precision
+                {heroT('highlight')}
               </span>
             </h1>
             <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance">
-              Effortlessly streamline your link management with Cayus.
+              {heroT('para_r1')}
               <br className="hidden md:block" />
-              <span className="hidden md:block">
-                Shorten, track, and organize all your links in one place.
-              </span>
+              <span className="hidden md:block">{heroT('para_r2')}</span>
             </p>
             <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
               <Button asChild>

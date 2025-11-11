@@ -14,6 +14,7 @@ import { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import AnimationContainer from '../global/animation-container';
+import LangSelect from '../global/lang-select';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MobileNavbar from './mobile-navbar';
 
@@ -108,6 +109,7 @@ const Navbar = () => {
           </div>
 
           <MobileNavbar />
+          <LangSelect />
         </MaxWidthWrapper>
       </AnimationContainer>
     </header>
