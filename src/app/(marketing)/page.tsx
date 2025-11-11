@@ -1,4 +1,4 @@
-import { AnimationContainer, MaxWidthWrapper } from '@/components';
+import { AnimationContainer, MaxWidthWrapper, EmailCTA } from '@/components';
 import { BentoCard, BentoGrid, CARDS } from '@/components/ui/bento-grid';
 import { BorderBeam } from '@/components/ui/border-beam';
 import { Button } from '@/components/ui/button';
@@ -243,6 +243,11 @@ const HomePage = async () => {
             ))}
           </div>
         </div>
+      </MaxWidthWrapper>
+
+      {/* Email CTA Section */}
+      <MaxWidthWrapper>
+        <EmailCTA />
       </MaxWidthWrapper>
 
       {/* CTA Section */}
