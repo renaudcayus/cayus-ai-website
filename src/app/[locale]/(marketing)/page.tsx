@@ -29,7 +29,7 @@ const HomePage = async () => {
       {/* Hero Section */}
       <MaxWidthWrapper>
         <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
-          <AnimationContainer className="capitalize flex flex-col items-center justify-center w-full text-center">
+          <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
             <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
               {heroT('title')}{' '}
               <span className="text-transparent bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text inline-bloc">
