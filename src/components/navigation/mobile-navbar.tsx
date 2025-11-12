@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet';
 import { cn, NAV_LINKS } from '@/utils';
 import { LucideIcon, Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -21,7 +21,7 @@ const MobileNavbar = () => {
   };
 
   return (
-    <div className="flex lg:hidden items-center justify-end">
+    <div className="flex lg:hidden items-center justify-end z-20">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button size="icon" variant="ghost">
@@ -29,18 +29,28 @@ const MobileNavbar = () => {
           </Button>
         </SheetTrigger>
         <SheetContent className="w-screen">
-          <SheetClose
-            asChild
-            className="absolute top-3 right-5 bg-background z-20 flex items-center justify-center"
-          >
-            <Button size="icon" variant="ghost" className="text-neutral-600">
-              <X className="w-5 h-5" />
-            </Button>
-          </SheetClose>
+          <SheetHeader className="text-left">
+            <Link href="/#home">
+              <span className="text-lg font-bold font-heading !leading-none">Cayus AI</span>
+            </Link>
+            <SheetClose
+              asChild
+              className="absolute top-3 right-5 bg-background z-20 flex items-center justify-center"
+            >
+              <Button size="icon" variant="ghost" className="text-neutral-600">
+                <X className="w-5 h-5" />
+              </Button>
+            </SheetClose>
+          </SheetHeader>
           <div className="flex flex-col items-start w-full py-2 mt-10">
             <div className="flex items-center justify-evenly w-full space-x-2"></div>
             <ul className="flex flex-col items-start w-full mt-6">
-              <Accordion type="single" collapsible className="!w-full">
+              <Accordion
+                type="single"
+                collapsible
+                className="!w-full"
+                defaultValue={NAV_LINKS[0].title}
+              >
                 {NAV_LINKS.map((link) => (
                   <AccordionItem key={link.title} value={link.title} className="last:border-none">
                     {link.menu ? (

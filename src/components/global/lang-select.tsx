@@ -20,7 +20,7 @@ export default function LangSelect() {
     return changeLocale(locale);
   }
   return (
-    <div className="*:not-first:mt-2 w-auto">
+    <div className="*:not-first:mt-2 w-auto relative">
       <Select defaultValue={currentLocale} onValueChange={handleOnSelect}>
         <SelectTrigger id={id}>
           <Languages size={16} className="mr-2" />
