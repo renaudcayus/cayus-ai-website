@@ -1,5 +1,6 @@
 import { AnimationContainer, MaxWidthWrapper } from '@/components';
 import AboutUs from '@/components/sections/about-us';
+import Testimonials from '@/components/sections/testimonials';
 import { BentoCard, BentoGrid, CARDS } from '@/components/ui/bento-grid';
 import { BorderBeam } from '@/components/ui/border-beam';
 import { Button } from '@/components/ui/button';
@@ -152,6 +153,7 @@ const HomePage = async () => {
       <AboutUs />
 
       {/* Reviews Section */}
+      <Testimonials />
 
       {/* CTA Section */}
       <MaxWidthWrapper className="mt-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">

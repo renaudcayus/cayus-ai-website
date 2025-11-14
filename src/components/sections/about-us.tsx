@@ -2,7 +2,7 @@ import { getScopedI18n } from '@/locals/server';
 import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
-import Reviews from './reviews';
+import Stories from './stories';
 
 async function AboutUs() {
   const aboutusT = await getScopedI18n('aboutus');
@@ -19,7 +19,7 @@ async function AboutUs() {
           </p>
         </div>
       </AnimationContainer>
-      <Reviews />
+      <Stories />
     </MaxWidthWrapper>
   );
 }
