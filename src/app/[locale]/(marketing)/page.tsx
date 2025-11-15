@@ -1,6 +1,7 @@
 import { AnimationContainer, MaxWidthWrapper } from '@/components';
 import AboutUs from '@/components/sections/about-us';
 import Testimonials from '@/components/sections/testimonials';
+import TrustedBrands from '@/components/sections/trusted-brands';
 import { BentoCard, BentoGrid, CARDS } from '@/components/ui/bento-grid';
 import { BorderBeam } from '@/components/ui/border-beam';
 import { Button } from '@/components/ui/button';
@@ -8,7 +9,7 @@ import { LampContainer } from '@/components/ui/lamp';
 import MagicBadge from '@/components/ui/magic-badge';
 import MagicCard from '@/components/ui/magic-card';
 import { getScopedI18n } from '@/locals/server';
-import { COMPANIES, PROCESS } from '@/utils';
+import { PROCESS } from '@/utils';
 import { ArrowRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -66,33 +67,7 @@ const HomePage = async () => {
       </MaxWidthWrapper>
 
       {/* Companies Section */}
-      <MaxWidthWrapper>
-        <AnimationContainer delay={0.4}>
-          <div className="py-14">
-            <div className="mx-auto px-4 md:px-8">
-              <h2 className="text-center text-sm font-medium font-heading text-neutral-600 uppercase">
-                Trusted by the best in the industry
-              </h2>
-              <div className="mt-8">
-                <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
-                  {COMPANIES.map((company) => (
-                    <li key={company.name}>
-                      <Image
-                        src={company.logo}
-                        alt={company.name}
-                        width={80}
-                        height={80}
-                        quality={100}
-                        className="w-28 h-auto"
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </AnimationContainer>
-      </MaxWidthWrapper>
+      <TrustedBrands />
 
       {/* Features Section */}
       <MaxWidthWrapper className="pt-10">
