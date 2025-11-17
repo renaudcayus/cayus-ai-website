@@ -1,0 +1,34 @@
+name: Append Issue Info
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  append-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add comment with explanation and coding standards
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.payload.issue.number;
+
+            const commentBody = `
+            **General Explanation:**  
+            Please provide a clear description of your issue, including steps to reproduce it and the expected behavior.
+
+            **Coding Standards:**  
+            - Follow the project’s code formatting guidelines.  
+            - Use meaningful variable and function names.  
+            - Include comments where necessary.  
+            - Ensure code passes linting and tests before submission.
+            `;
+
+            await github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: commentBody
+            });
