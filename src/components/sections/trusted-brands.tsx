@@ -1,8 +1,6 @@
+import Image from 'next/image';
 import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
-import BusinessForGoods from '../logos/business-for-goods';
-import ICFLogo from '../logos/icf-logo';
-import MicrosoftLogo from '../logos/microsoft-logo';
 
 function TrustedBrands() {
   return (
@@ -16,13 +14,23 @@ function TrustedBrands() {
             <div className="mt-8">
               <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
                 <li>
-                  <MicrosoftLogo />
+                  <Image
+                    height={75}
+                    width={150}
+                    src={'/logos/microsoft-for-startups.svg'}
+                    alt="Microsoft For Startups Logo"
+                  />
                 </li>
                 <li>
-                  <ICFLogo />
+                  <Image height={75} width={75} src={'/logos/icf.svg'} alt="ICF Logo" />
                 </li>
                 <li>
-                  <BusinessForGoods />
+                  <Image
+                    height={100}
+                    width={180}
+                    src={'/logos/business-for-good.svg'}
+                    alt="Business For Good Logo"
+                  />
                 </li>
               </ul>
             </div>
