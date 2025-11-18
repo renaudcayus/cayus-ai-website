@@ -1,4 +1,4 @@
-import { AnimationContainer, MaxWidthWrapper } from '@/components';
+import { AnimationContainer, EmailCTA, MaxWidthWrapper } from '@/components';
 import AboutUs from '@/components/sections/about-us';
 import Testimonials from '@/components/sections/testimonials';
 import TrustedBrands from '@/components/sections/trusted-brands';
@@ -12,7 +12,6 @@ import { getScopedI18n } from '@/locals/server';
 import { PROCESS } from '@/utils';
 import { ArrowRightIcon } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const HomePage = async () => {
   const heroT = await getScopedI18n('hero');
@@ -34,14 +33,7 @@ const HomePage = async () => {
               <br className="hidden md:block" />
               <span className="hidden md:block">{heroT('para_r2')}</span>
             </p>
-            <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
-              <Button asChild>
-                <Link href={'/dashboard'} className="flex items-center">
-                  Start creating for free
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-            </div>
+            <EmailCTA />
           </AnimationContainer>
 
           <AnimationContainer

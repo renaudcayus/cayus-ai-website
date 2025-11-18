@@ -55,6 +55,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
     "react-resizable-panels": "^2.0.19",
+    "resend": "^6.4.2",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
     "tailwind-scrollbar-hide": "^1.1.7",
