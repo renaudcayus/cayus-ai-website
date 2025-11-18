@@ -19,14 +19,14 @@ jobs:
             const issue_number = context.payload.issue.number;
 
             const commentBody = `
-            **General Explanation:**  
-            Please provide a clear description of your issue, including steps to reproduce it and the expected behavior.
+            #Contributor guidelines:  
+            ---
+            When submitting a PR, please follow these guidelines:
 
-            **Coding Standards:**  
-            - Follow the project’s code formatting guidelines.  
-            - Use meaningful variable and function names.  
-            - Include comments where necessary.  
-            - Ensure code passes linting and tests before submission.
+            - Include a short demo video showcasing the UI and any relevant edge-case testing. This makes the review process significantly faster.
+            - Avoid unnecessary AI-generated comments or overly obvious code comments. Code should be self-explanatory whenever possible. Add comments only when implementing a workaround, a non-obvious solution, or something that will genuinely help future developers understand the context.  
+
+            Quality is our top priority. We don’t optimize for speed if it compromises stability or introduces bugs.
             `;
 
             await github.rest.issues.createComment({
