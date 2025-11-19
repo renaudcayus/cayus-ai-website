@@ -9,4 +9,6 @@ Cayus est notre réponse : une plateforme pragmatique conçue pour s’intégrer
 Notre objectif est simple : offrir aux managers le temps, le contexte et l’accompagnement dont ils ont besoin pour diriger avec confiance.Is this conversation helpful so far?`,
   'aboutus.title': 'Notre histoire',
   'aboutus.badge': 'À propos de nous',
+
+  'getStarted.message.error': 'Échec de l’envoi de l’e-mail. Veuillez réessayer plus tard.',
 } as const;

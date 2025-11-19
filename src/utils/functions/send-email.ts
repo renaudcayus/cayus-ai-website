@@ -1,3 +1,4 @@
+import { getScopedI18n } from '@/locals/server';
 import { Resend } from 'resend';
 
 export interface ISendEmail {
@@ -8,23 +9,24 @@ export interface ISendEmail {
   text?: string;
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function sendEmail({ from, to, subject, html, text }: ISendEmail) {
-  const { data, error } = await resend.emails.send({
-    from: from,
-    to: to,
-    subject,
-    html,
-    text,
-  });
+  const scoptedT = await getScopedI18n('getStarted.message');
 
-  if (error) {
+  try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const { data, error } = await resend.emails.send({
+      from: from,
+      to: to,
+      subject,
+      html,
+      text,
+    });
+
+    return { status: 'success', data };
+  } catch (error: Error | any) {
     return {
       status: 'failed',
-      message: process.env.NODE_ENV === 'production' ? 'Failed to send email.' : error.message,
+      message: process.env.NODE_ENV !== 'development' ? scoptedT('error') : error.message,
     };
   }
-
-  return { status: 'success', data };
 }
