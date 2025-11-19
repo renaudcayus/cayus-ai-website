@@ -40,7 +40,7 @@ const Navbar = () => {
     <header
       className={cn(
         'fixed top-0 inset-x-0 h-14 w-full border-b border-transparent z-10 select-none',
-        scroll && 'fixed border-background/80 bg-background/40 backdrop-blur-md overflow-x-hidden',
+        scroll && 'border-background/80 bg-background/40 backdrop-blur-md ',
       )}
     >
       <AnimationContainer reverse delay={0.1} className="size-full">
