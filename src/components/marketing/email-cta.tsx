@@ -1,10 +1,10 @@
 'use client';
 import { sendContactEmail } from '@/app/actions/get-started';
 import { Button } from '@/components/ui/button';
+import { useScopedI18n } from '@/locals/client';
 import { cn } from '@/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ArrowRight } from 'lucide-react';
-import { useRef } from 'react';
 import { useFormStatus } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -18,11 +18,13 @@ const contactFormSchema = z.object({
 
 const EmailCTA = () => {
   const { pending } = useFormStatus();
-  const formRef = useRef<HTMLFormElement>(null);
+
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: { email: '' },
   });
+
+  const scopedT = useScopedI18n('getStarted.message');
 
   async function handleSubmit(values: z.infer<typeof contactFormSchema>) {
     const { status, data, message } = await sendContactEmail({ email: values.email });
@@ -30,14 +32,14 @@ const EmailCTA = () => {
     form.reset();
 
     if (status === 'success') {
-      toast.success('Email sent successfully!');
+      toast.success(scopedT('success'));
     } else {
       toast.error(message ?? 'Failed to send email.');
     }
   }
 
   return (
-    <div className="z-20 hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
+    <div className="z-20 flex relative items-center justify-center mt-8 md:mt-12 w-full">
       <Form {...form}>
         <form
           className="flex items-center justify-center w-max rounded-full border border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-4 shadow-3xl shadow-background/40 cursor-pointer select-none"
@@ -66,7 +68,7 @@ const EmailCTA = () => {
           <Button
             size="sm"
             type="submit"
-            className="rounded-full hidden lg:flex border border-foreground/20"
+            className="rounded-full border border-foreground/20"
             disabled={pending}
           >
             Get Started

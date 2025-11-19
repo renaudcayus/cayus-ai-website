@@ -11,4 +11,5 @@ Notre objectif est simple : offrir aux managers le temps, le contexte et l’acc
   'aboutus.badge': 'À propos de nous',
 
   'getStarted.message.error': 'Échec de l’envoi de l’e-mail. Veuillez réessayer plus tard.',
+  'getStarted.message.success': 'E-mail envoyé avec succès !',
 } as const;
