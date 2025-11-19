@@ -11,4 +11,5 @@ Our goal is simple: give managers the time, context, and coaching they need to l
   'aboutus.badge': 'About Us',
 
   'getStarted.message.error': 'Failed to send email. Try again later.',
+  'getStarted.message.success': 'Email sent successfully!',
 } as const;
