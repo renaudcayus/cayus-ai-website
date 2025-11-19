@@ -9,4 +9,6 @@ Cayus is our answer: a pragmatic platform designed to work in the flow of day-to
 Our goal is simple: give managers the time, context, and coaching they need to lead with confidence.`,
   'aboutus.title': 'Our Story',
   'aboutus.badge': 'About Us',
+
+  'getStarted.message.error': 'Failed to send email. Try again later.',
 } as const;

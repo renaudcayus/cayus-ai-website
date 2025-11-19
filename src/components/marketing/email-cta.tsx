@@ -32,7 +32,7 @@ const EmailCTA = () => {
     if (status === 'success') {
       toast.success('Email sent successfully!');
     } else {
-      toast.error('Failed to send email.');
+      toast.error(message ?? 'Failed to send email.');
     }
   }
 
