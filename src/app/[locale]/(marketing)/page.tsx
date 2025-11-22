@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { LampContainer } from '@/components/ui/lamp';
 import MagicBadge from '@/components/ui/magic-badge';
 import MagicCard from '@/components/ui/magic-card';
-import { I18nProviderClient } from '@/locals/client';
 import { getScopedI18n } from '@/locals/server';
 import { PROCESS } from '@/utils';
 import { ArrowRightIcon } from 'lucide-react';
@@ -34,9 +33,8 @@ const HomePage = async ({ params }: { params: { locale: string } }) => {
               <br className="hidden md:block" />
               <span className="hidden md:block">{heroT('para_r2')}</span>
             </p>
-            <I18nProviderClient locale={params.locale}>
-              <EmailCTA />
-            </I18nProviderClient>
+
+            <EmailCTA />
           </AnimationContainer>
 
           <AnimationContainer
