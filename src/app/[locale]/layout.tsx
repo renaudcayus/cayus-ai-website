@@ -1,11 +1,18 @@
 import { Providers } from '@/components';
 import { Toaster } from '@/components/ui/sonner';
+import { I18nProviderClient } from '@/locals/client';
 import '@/styles/globals.css';
 import { aeonik, cn, generateMetadata, inter } from '@/utils';
 
 export const metadata = generateMetadata();
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
   return (
     <html lang="en" className="scrollbar relative">
       <body
@@ -15,10 +22,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           inter.variable,
         )}
       >
-        <Providers>
-          <Toaster richColors position="top-right" />
-          {children}
-        </Providers>
+        <I18nProviderClient locale={params?.locale}>
+          <Providers>
+            <Toaster richColors position="top-right" />
+            {children}
+          </Providers>
+        </I18nProviderClient>
       </body>
     </html>
   );
