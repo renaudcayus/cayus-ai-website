@@ -253,4 +253,426 @@ l-88 0 0 261 0 261 98 -4 c81 -3 107 -8 154 -31z"
       </defs>
     </svg>
   ),
+
+  openai: (props: LucideProps) => (
+    <svg role="img" viewBox="0 0 24 24" {...props}>
+      <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
+    </svg>
+  ),
+  user: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-user"
+      {...props}
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </svg>
+  ),
+
+  outlookCal: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="100"
+      height="100"
+      viewBox="0 0 48 48"
+      {...props}
+    >
+      <path
+        fill="#1976d2"
+        d="M28,13h14.533C43.343,13,44,13.657,44,14.467v19.066C44,34.343,43.343,35,42.533,35H28V13z"
+      ></path>
+      <rect width="14" height="15.542" x="28" y="17.958" fill="#fff"></rect>
+      <polygon fill="#1976d2" points="27,44 4,39.5 4,8.5 27,4"></polygon>
+      <path
+        fill="#fff"
+        d="M15.25,16.5c-3.176,0-5.75,3.358-5.75,7.5s2.574,7.5,5.75,7.5S21,28.142,21,24	S18.426,16.5,15.25,16.5z M15,28.5c-1.657,0-3-2.015-3-4.5s1.343-4.5,3-4.5s3,2.015,3,4.5S16.657,28.5,15,28.5z"
+      ></path>
+      <rect width="2.7" height="2.9" x="28.047" y="29.737" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="31.448" y="29.737" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="34.849" y="29.737" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="28.047" y="26.159" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="31.448" y="26.159" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="34.849" y="26.159" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="38.25" y="26.159" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="28.047" y="22.706" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="31.448" y="22.706" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="34.849" y="22.706" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="38.25" y="22.706" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="31.448" y="19.112" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="34.849" y="19.112" fill="#1976d2"></rect>
+      <rect width="2.7" height="2.9" x="38.25" y="19.112" fill="#1976d2"></rect>
+    </svg>
+  ),
+  microsoftTeams: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="100"
+      height="100"
+      viewBox="0 0 48 48"
+      {...props}
+    >
+      <path
+        fill="#5c6bc0"
+        d="M41.5 13A3.5 3.5 0 1 0 41.5 20 3.5 3.5 0 1 0 41.5 13zM4 40l23 4V4L4 8V40z"
+      ></path>
+      <path
+        fill="#fff"
+        d="M21 16.27L21 19 17.01 19.18 16.99 31.04 14.01 30.95 14.01 19.29 10 19.45 10 16.94z"
+      ></path>
+      <path
+        fill="#5c6bc0"
+        d="M36 14c0 2.21-1.79 4-4 4-1.2 0-2.27-.53-3-1.36v-5.28c.73-.83 1.8-1.36 3-1.36C34.21 10 36 11.79 36 14zM38 23v11c0 0 1.567 0 3.5 0 1.762 0 3.205-1.306 3.45-3H45v-8H38zM29 20v17c0 0 1.567 0 3.5 0 1.762 0 3.205-1.306 3.45-3H36V20H29z"
+      ></path>
+    </svg>
+  ),
+  meetings: (props: LucideProps) => (
+    <svg
+      id="Chat_Room_24"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className="block"
+    >
+      <rect width="24" height="24" fill="#000" opacity="0" />
+
+      <g transform="matrix(0.42 0 0 0.42 12 12)">
+        <defs>
+          <linearGradient
+            id="SVGID_nyeHUin1eCW9T4kNqueuoa_22"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(1 0 0 1 -24 -9)"
+            x1="21.046"
+            y1="6.046"
+            x2="26.776"
+            y2="11.776"
+          >
+            <stop offset="0%" stopColor="rgb(13,97,169)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(22,82,140)" stopOpacity="1" />
+          </linearGradient>
+
+          <linearGradient
+            id="SVGID_nyeHUin1eCW9T4kNqueuob_23"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(1 0 0 1 -41 -11)"
+            x1="39.045"
+            y1="7.135"
+            x2="42.844"
+            y2="14.646"
+          >
+            <stop offset="0%" stopColor="rgb(25,154,224)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(7,130,216)" stopOpacity="1" />
+          </linearGradient>
+
+          <linearGradient
+            id="SVGID_nyeHUin1eCW9T4kNqueuoc_24"
+            gradientUnits="userSpaceOnUse"
+            x1="20.644"
+            y1="16.863"
+            x2="25.369"
+            y2="26.86"
+          >
+            <stop offset="0%" stopColor="rgb(13,97,169)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(22,82,140)" stopOpacity="1" />
+          </linearGradient>
+
+          <linearGradient
+            id="SVGID_nyeHUin1eCW9T4kNqueuod_25"
+            gradientUnits="userSpaceOnUse"
+            x1="28.469"
+            y1="-3.28"
+            x2="42.744"
+            y2="51.836"
+          >
+            <stop offset="0%" stopColor="rgb(25,154,224)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(7,130,216)" stopOpacity="1" />
+          </linearGradient>
+
+          <linearGradient
+            id="SVGID_nyeHUin1eCW9T4kNqueuoe_26"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(-1 0 0 1 70 -11)"
+            x1="68.045"
+            y1="7.135"
+            x2="71.844"
+            y2="14.646"
+          >
+            <stop offset="0%" stopColor="rgb(25,154,224)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(7,130,216)" stopOpacity="1" />
+          </linearGradient>
+
+          <linearGradient
+            id="SVGID_nyeHUin1eCW9T4kNqueuof_27"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(-1 0 0 1 77 0)"
+            x1="57.469"
+            y1="-3.28"
+            x2="71.744"
+            y2="51.836"
+          >
+            <stop offset="0%" stopColor="rgb(25,154,224)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(7,130,216)" stopOpacity="1" />
+          </linearGradient>
+        </defs>
+
+        <g>
+          <g transform="matrix(1 0 0 1 0 -15)">
+            <circle cx="0" cy="0" r="4" fill="url(#SVGID_nyeHUin1eCW9T4kNqueuoa_22)" />
+          </g>
+
+          <g transform="matrix(1 0 0 1 17 -13)">
+            <circle cx="0" cy="0" r="4" fill="url(#SVGID_nyeHUin1eCW9T4kNqueuob_23)" />
+          </g>
+
+          <g transform="matrix(1 0 0 1 0 -2.75)">
+            <path
+              d="M 31 26.5 L 17 26.5 L 17 23 C 17 19.134 20.134 16 24 16 C 27.866 16 31 19.134 31 23 L 31 26.5 z"
+              transform="translate(-24, -21.25)"
+              fill="url(#SVGID_nyeHUin1eCW9T4kNqueuoc_24)"
+            />
+          </g>
+
+          <g transform="matrix(1 0 0 1 13.5 6.5)">
+            <path
+              d="M 41 18 C 38.791 18 37 19.791 37 22 L 37 29.981 L 31.621 31.038 C 30.698 31.215 30 32.025 30 33 L 30 41.5 C 30 42.328 30.672 43 31.5 43 C 32.328 43 32.921 42.31 33.019 41.5 C 33.056 41.193 33.81 35 33.81 35 L 41 35 C 43.209 35 45 33.209 45 31 L 45 22 C 45 19.791 43.209 18 41 18 z"
+              transform="translate(-37.5, -30.5)"
+              fill="url(#SVGID_nyeHUin1eCW9T4kNqueuod_25)"
+            />
+          </g>
+
+          <g transform="matrix(1 0 0 1 -17 -13)">
+            <circle cx="0" cy="0" r="4" fill="url(#SVGID_nyeHUin1eCW9T4kNqueuoe_26)" />
+          </g>
+
+          <g transform="matrix(1 0 0 1 -13.5 6.5)">
+            <path
+              d="M 7 18 C 9.209 18 11 19.791 11 22 L 11 29.981 L 16.379 31.038 C 17.302 31.215 18 32.025 18 33 L 18 41.5 C 18 42.328 17.328 43 16.5 43 C 15.672 43 15.079 42.31 14.981 41.5 C 14.944 41.193 14.19 35 14.19 35 L 7 35 C 4.791 35 3 33.209 3 31 L 3 22 C 3 19.791 4.791 18 7 18 z"
+              transform="translate(-10.5, -30.5)"
+              fill="url(#SVGID_nyeHUin1eCW9T4kNqueuof_27)"
+            />
+          </g>
+
+          <g transform="matrix(1 0 0 1 0 2.5)">
+            <path
+              d="M 33 28 L 15 28 C 14.448 28 14 27.552 14 27 L 14 26 C 14 25.448 14.448 25 15 25 L 33 25 C 33.552 25 34 25.448 34 26 L 34 27 C 34 27.552 33.552 28 33 28 z"
+              transform="translate(-24, -26.5)"
+              fill="rgb(51,204,255)"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  ),
+  chats: (props: LucideProps) => (
+    <svg
+      id="Chat_Room_24"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <rect width="24" height="24" fill="#000000" opacity="0" />
+
+      <g transform="matrix(0.42 0 0 0.42 12 12)">
+        <g>
+          <g transform="matrix(1 0 0 1 2.5 -3)">
+            <path
+              transform="translate(-26.5, -21)"
+              d="M 38 5 L 15 5 C 12.239 5 10 7.239 10 10 L 10 37 L 16.965 30 L 38 30 C 40.761 30 43 27.761 43 25 L 43 10 C 43 7.239 40.761 5 38 5 z"
+              fill="#1565C0"
+              fillRule="nonzero"
+            />
+          </g>
+
+          <g transform="matrix(1 0 0 1 -2.5 3)">
+            <path
+              transform="translate(-21.5, -27)"
+              d="M 33 11 L 10 11 C 7.239 11 5 13.239 5 16 L 5 43 L 11.965 36 L 33 36 C 35.761 36 38 33.761 38 31 L 38 16 C 38 13.239 35.761 11 33 11 z"
+              fill="#2196F3"
+              fillRule="nonzero"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  ),
+  outlook: (props: LucideProps) => (
+    <svg
+      id="Microsoft_Outlook_2019_24"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className="" // add tailwind classes here (e.g. "w-6 h-6")
+      {...props}
+    >
+      <rect width="24" height="24" fill="#000" opacity="0" />
+
+      <g transform="matrix(0.42 0 0 0.42 12 12)">
+        {/* Blue right-top flap */}
+        <g transform="matrix(1 0 0 1 16.22 1.38)">
+          <path
+            fill="rgb(26,35,126)"
+            fillRule="nonzero"
+            transform="translate(-40.22, -25.38)"
+            d="M 43.607 23.752 L 36.445 19.58 L 36.445 31.174 L 44 31.174 L 44 24.436 C 44 24.155 43.85 23.894 43.607 23.752 z"
+          />
+        </g>
+
+        {/* Top bar */}
+        <g transform="matrix(1 0 0 1 5.45 -16.58)">
+          <path
+            fill="rgb(12,73,153)"
+            fillRule="nonzero"
+            transform="translate(-29.45, -7.42)"
+            d="M 33.919 8.84 L 42.965 8.84 L 42.965 7.732 C 42.965 6.775 42.19 6 41.234 6 L 17.667 6 C 16.711 6 15.935 6.775 15.935 7.732 L 15.935 8.84 L 24.94 8.84 L 33.919 8.84 z"
+          />
+        </g>
+
+        {/* Right middle box */}
+        <g transform="matrix(1 0 0 1 14.44 5.24)">
+          <path
+            fill="rgb(15,115,217)"
+            fillRule="nonzero"
+            transform="translate(-38.44, -29.24)"
+            d="M 33.919 33.522 L 41.233 33.522 C 42.189 33.522 42.965 32.747 42.965 31.79 L 42.965 24.963 L 33.919 24.963 L 33.919 33.522 z"
+          />
+        </g>
+
+        {/* Left middle box */}
+        <g transform="matrix(1 0 0 1 -3.56 5.24)">
+          <path
+            fill="rgb(15,67,157)"
+            fillRule="nonzero"
+            transform="translate(-20.44, -29.24)"
+            d="M 15.936 24.964 L 15.936 31.791 C 15.936 32.747 16.711 33.523 17.668 33.523 L 24.941 33.523 L 24.941 24.965 L 15.936 24.965 z"
+          />
+        </g>
+
+        {/* Right top box */}
+        <g transform="matrix(1 0 0 1 14.44 -11.15)">
+          <path
+            fill="rgb(46,205,253)"
+            fillRule="nonzero"
+            transform="translate(-38.44, -12.85)"
+            d="M 33.919 8.84 L 42.965 8.84 L 42.965 16.867 L 33.919 16.867 z"
+          />
+        </g>
+
+        {/* Left top box */}
+        <g transform="matrix(1 0 0 1 -3.56 -11.15)">
+          <path
+            fill="rgb(28,95,176)"
+            fillRule="nonzero"
+            transform="translate(-20.44, -12.85)"
+            d="M 15.936 8.84 L 24.941 8.84 L 24.941 16.867 L 15.936 16.867 z"
+          />
+        </g>
+
+        {/* Center right box */}
+        <g transform="matrix(1 0 0 1 5.43 5.24)">
+          <path
+            fill="rgb(20,103,199)"
+            fillRule="nonzero"
+            transform="translate(-29.43, -29.24)"
+            d="M 24.94 24.964 L 33.919 24.964 L 33.919 33.522 L 24.94 33.522 z"
+          />
+        </g>
+
+        {/* Center top box */}
+        <g transform="matrix(1 0 0 1 5.43 -11.15)">
+          <path
+            fill="rgb(22,144,213)"
+            fillRule="nonzero"
+            transform="translate(-29.43, -12.85)"
+            d="M 24.94 8.84 L 33.919 8.84 L 33.919 16.867 L 24.94 16.867 z"
+          />
+        </g>
+
+        {/* Right center bar */}
+        <g transform="matrix(1 0 0 1 14.44 -3.09)">
+          <path
+            fill="rgb(27,180,255)"
+            fillRule="nonzero"
+            transform="translate(-38.44, -20.91)"
+            d="M 33.919 16.867 L 42.965 16.867 L 42.965 24.963 L 33.919 24.963 z"
+          />
+        </g>
+
+        {/* Left center bar */}
+        <g transform="matrix(1 0 0 1 -3.56 -3.09)">
+          <path
+            fill="rgb(7,77,175)"
+            fillRule="nonzero"
+            transform="translate(-20.44, -20.91)"
+            d="M 15.936 16.867 L 24.941 16.867 L 24.941 24.963 L 15.936 24.963 z"
+          />
+        </g>
+
+        {/* Center bar */}
+        <g transform="matrix(1 0 0 1 5.43 -3.09)">
+          <path
+            fill="rgb(32,118,212)"
+            fillRule="nonzero"
+            transform="translate(-29.43, -20.91)"
+            d="M 24.94 16.867 L 33.919 16.867 L 33.919 24.963 L 24.94 24.963 z"
+          />
+        </g>
+
+        {/* Envelope front-left */}
+        <g transform="matrix(1 0 0 1 5.37 9.22)">
+          <path
+            fill="rgb(46,208,255)"
+            fillRule="nonzero"
+            transform="translate(-29.37, -33.22)"
+            d="M 15.441 42 C 15.904 42 42.311 42 42.311 42 C 43.244 42 44 41.244 44 40.311 L 44 24.438 C 44 24.438 43.97 25.096 42.249 26.055 C 40.949 26.779 14.744 41.566 14.744 41.566 C 14.744 41.566 14.978 42 15.441 42 z"
+          />
+        </g>
+
+        {/* Envelope front-right */}
+        <g transform="matrix(1 0 0 1 4.68 9.53)">
+          <path
+            fill="rgb(19,159,226)"
+            fillRule="nonzero"
+            transform="translate(-28.68, -33.53)"
+            d="M 42.279 41.997 C 42.118 41.997 15.689 42 15.689 42 C 14.756 42 14 41.244 14 40.311 L 14 25.067 L 43.363 41.629 C 43.118 41.825 42.807 41.997 42.279 41.997 z"
+          />
+        </g>
+
+        {/* Left solid blue panel */}
+        <g transform="matrix(1 0 0 1 -10 0)">
+          <path
+            fill="rgb(0,72,141)"
+            fillRule="nonzero"
+            transform="translate(-14, -24)"
+            d="M 22.319 34 L 5.681 34 C 4.753 34 4 33.247 4 32.319 L 4 15.681 C 4 14.753 4.753 14 5.681 14 L 22.319 14 C 23.247 14 24 14.753 24 15.681 L 24 32.319 C 24 33.247 23.247 34 22.319 34 z"
+          />
+        </g>
+
+        {/* Letter "O" */}
+        <g transform="matrix(1 0 0 1 -10.09 0.08)">
+          <path
+            fill="white"
+            fillRule="nonzero"
+            transform="translate(-13.91, -24.08)"
+            d="M 13.914 18.734 C 10.783 18.734 8.897 21.126 8.897 24.077 C 8.897 27.028 10.776 29.419 13.914 29.419 C 17.053 29.419 18.931 27.027 18.931 24.077 C 18.931 21.126 17.045 18.734 13.914 18.734 z M 13.914 27.616 C 12.138 27.616 11.076 26.032 11.076 24.077 C 11.076 22.122 12.143 20.538 13.914 20.538 C 15.685 20.538 16.753 22.123 16.753 24.077 C 16.753 26.031 15.689 27.616 13.914 27.616 z"
+          />
+        </g>
+      </g>
+    </svg>
+  ),
 };
