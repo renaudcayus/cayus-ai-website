@@ -5,7 +5,7 @@ import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
 import MagicCard from '../ui/magic-card';
 
-const processIcons = [FolderOpenIcon, WandSparklesIcon, BarChart3Icon];
+const problemIcons = [FolderOpenIcon, WandSparklesIcon, BarChart3Icon];
 
 async function TheProblem() {
   const [scopedT, cardT] = await Promise.all([
@@ -26,8 +26,8 @@ async function TheProblem() {
         </div>
       </AnimationContainer>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-8 gap-4 md:gap-8">
-        {processIcons.map((Icon, id) => {
-          const key = (id + 1).toString();
+        {problemIcons.map((Icon, id) => {
+          const key = id + 1;
           return (
             <AnimationContainer delay={0.2 * id} key={key}>
               <MagicCard className="group md:py-8">
@@ -38,8 +38,12 @@ async function TheProblem() {
                       {id + 1}
                     </span>
                     <h3 className="text-base mt-6 font-medium text-foreground">
-                      {cardT(key as any)}
+                      {/* The argument would be string key to get translation, i.e, 1.title, 2.title, and so on. */}
+                      {cardT(`${key}.title` as any)}
                     </h3>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {cardT(`${key}.description` as any)}
+                    </p>
                   </div>
                 </div>
               </MagicCard>
