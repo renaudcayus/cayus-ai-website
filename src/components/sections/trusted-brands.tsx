@@ -32,6 +32,9 @@ function TrustedBrands() {
                     alt="Business For Good Logo"
                   />
                 </li>
+                <li>
+                  <Image height={75} width={150} src={'/logos/cxo-logo.svg'} alt="CXO Logo" />
+                </li>
               </ul>
             </div>
           </div>
