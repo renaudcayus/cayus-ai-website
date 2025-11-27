@@ -1,17 +1,18 @@
 import { getScopedI18n } from '@/locals/server';
 import { BarChart3Icon, FolderOpenIcon, WandSparklesIcon } from 'lucide-react';
+import CardWithIcon from '../cards/card-with-icon';
 import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
-import MagicCard from '../ui/magic-card';
-
-const problemIcons = [FolderOpenIcon, WandSparklesIcon, BarChart3Icon];
 
 async function TheProblem() {
+  const problemIcons = [FolderOpenIcon, WandSparklesIcon, BarChart3Icon] as const;
+
   const [scopedT, cardT] = await Promise.all([
     getScopedI18n('problem'),
     getScopedI18n('problem.card'),
   ]);
+
   return (
     <MaxWidthWrapper className="py-10">
       <AnimationContainer delay={0.1}>
@@ -29,25 +30,13 @@ async function TheProblem() {
         {problemIcons.map((Icon, id) => {
           const key = id + 1;
           return (
-            <AnimationContainer delay={0.2 * id} key={key}>
-              <MagicCard className="group md:py-8">
-                <div className="flex flex-col items-start justify-center w-full">
-                  <Icon strokeWidth={1.5} className="w-10 h-10 text-foreground" />
-                  <div className="flex flex-col relative items-start">
-                    <span className="absolute -top-6 right-0 border-2 border-border text-foreground font-medium text-2xl rounded-full w-12 h-12 flex items-center justify-center pt-0.5">
-                      {id + 1}
-                    </span>
-                    <h3 className="text-base mt-6 font-medium text-foreground">
-                      {/* The argument would be string key to get translation, i.e, 1.title, 2.title, and so on. */}
-                      {cardT(`${key}.title` as any)}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {cardT(`${key}.description` as any)}
-                    </p>
-                  </div>
-                </div>
-              </MagicCard>
-            </AnimationContainer>
+            <CardWithIcon
+              key={key}
+              index={id}
+              Icon={Icon}
+              title={cardT(`${key}.title` as any)}
+              description={cardT(`${key}.description` as any)}
+            />
           );
         })}
       </div>

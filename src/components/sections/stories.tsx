@@ -1,6 +1,6 @@
 import { REVIEWS } from '@/utils/constants/misc';
+import ReviewCard from '../cards/review-card';
 import MaxWidthWrapper from '../global/max-width-wrapper';
-import ReviewCard from '../reviews/review-card';
 
 function Stories() {
   return (
