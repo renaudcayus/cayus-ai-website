@@ -6,8 +6,6 @@ import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
 
 async function TheProblem() {
-  const problemIcons = [FolderOpenIcon, WandSparklesIcon, BarChart3Icon] as const;
-
   const [scopedT, cardT] = await Promise.all([
     getScopedI18n('problem'),
     getScopedI18n('problem.card'),
@@ -27,18 +25,24 @@ async function TheProblem() {
         </div>
       </AnimationContainer>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-8 gap-4 md:gap-8">
-        {problemIcons.map((Icon, id) => {
-          const key = id + 1;
-          return (
-            <CardWithIcon
-              key={key}
-              index={id}
-              Icon={Icon}
-              title={cardT(`${key}.title` as any)}
-              description={cardT(`${key}.description` as any)}
-            />
-          );
-        })}
+        <CardWithIcon
+          index={1}
+          Icon={FolderOpenIcon}
+          title={cardT('1.title')}
+          description={cardT('1.description')}
+        />
+        <CardWithIcon
+          index={2}
+          Icon={WandSparklesIcon}
+          title={cardT('2.title')}
+          description={cardT('2.description')}
+        />
+        <CardWithIcon
+          index={3}
+          Icon={BarChart3Icon}
+          title={cardT('3.title')}
+          description={cardT('3.description')}
+        />
       </div>
     </MaxWidthWrapper>
   );
