@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import AnimationContainer from '../global/animation-container';
 import AvatarGroup from '../global/avatar-group';
 import Checklist from '../global/checklist';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import { BentoCard, BentoGrid } from '../ui/bento-grid';
+import { Button } from '../ui/button';
 import { Calendar } from '../ui/calendar';
 import MagicBadge from '../ui/magic-badge';
 
@@ -28,14 +30,23 @@ function Solution() {
                   { name: 'Jessica', src: '/assets/manager-2.jpg' },
                   { name: 'Jessica', src: '/assets/manager-3.jpg' },
                 ]}
+                extra={
+                  <p className="px-2 text-muted-foreground text-xs">
+                    Trusted by <strong className="font-medium text-foreground">2K+</strong>{' '}
+                    Managers.
+                  </p>
+                }
               />
             }
             description={
               <Checklist list={['Prepares 1:1s', 'Highlights Priorities', 'Coaches In Context']} />
             }
             name="For Managers"
-            cta="Learn More"
-            href="#"
+            cta={
+              <Button variant={'primary'} asChild>
+                <Link href={'#'}>Try Now</Link>
+              </Button>
+            }
             background={
               <Calendar
                 mode="single"
@@ -54,6 +65,12 @@ function Solution() {
                   { name: 'Jessica', src: '/assets/HR3.jpg' },
                   { name: 'Jessica', src: '/assets/manager-4.jpg' },
                 ]}
+                extra={
+                  <p className="px-2 text-muted-foreground text-xs">
+                    Trusted by <strong className="font-medium text-foreground">1.5K+</strong> HR
+                    Leaders.
+                  </p>
+                }
               />
             }
             description={
@@ -62,8 +79,11 @@ function Solution() {
               />
             }
             name="For HR Leaders"
-            cta="Learn More"
-            href="#"
+            cta={
+              <Button variant={'primary'} asChild>
+                <Link href={'#'}>Try Now</Link>
+              </Button>
+            }
             background={
               <Calendar
                 mode="single"

@@ -1,10 +1,10 @@
-import { buttonVariants } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import { Command } from '@/components/ui/command';
 import { cn } from '@/utils';
-import { ArrowRightIcon, CalendarIcon, Link2Icon, SearchIcon, WaypointsIcon } from 'lucide-react';
+import { CalendarIcon, Link2Icon, SearchIcon, WaypointsIcon } from 'lucide-react';
 import Link from 'next/link';
 import React, { ReactNode } from 'react';
+import { Button } from './button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './card';
 import { Input } from './input';
 import { Integrations } from './integrations';
@@ -15,8 +15,12 @@ export const CARDS = [
     Icon: Link2Icon,
     name: 'Shorten links',
     description: 'Create short links that are easy to remember and share.',
-    href: '#',
-    cta: 'Learn more',
+
+    cta: (
+      <Button size={'sm'} variant={'ghost'} className="cursor-pointer">
+        <Link href={'#'}>Learn More</Link>
+      </Button>
+    ),
     className: 'col-span-3 lg:col-span-1',
     background: (
       <Card className="absolute top-10 left-10 origin-top rounded-none rounded-tl-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_100%)] group-hover:scale-105 border border-border border-r-0">
@@ -40,7 +44,11 @@ export const CARDS = [
     name: 'Search your links',
     description: 'Quickly find the links you need with AI-powered search.',
     href: '#',
-    cta: 'Learn more',
+    cta: (
+      <Button size={'sm'} variant={'ghost'} className="cursor-pointer">
+        <Link href={'#'}>Learn More</Link>
+      </Button>
+    ),
     className: 'col-span-3 lg:col-span-2',
     background: (
       <Command className="absolute right-10 top-10 w-[70%] origin-to translate-x-0 border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10 p-2">
@@ -61,7 +69,11 @@ export const CARDS = [
     name: 'Connect your apps',
     description: 'Integrate with your favorite apps and services.',
     href: '#',
-    cta: 'Learn more',
+    cta: (
+      <Button size={'sm'} variant={'ghost'} className="cursor-pointer">
+        <Link href={'#'}>Learn More</Link>
+      </Button>
+    ),
     className: 'col-span-3 lg:col-span-2 max-w-full overflow-hidden',
     background: (
       <Integrations className="absolute right-2 pl-28 md:pl-0 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
@@ -73,7 +85,11 @@ export const CARDS = [
     description: 'Keep track of your links with our calendar view.',
     className: 'col-span-3 lg:col-span-1',
     href: '#',
-    cta: 'Learn more',
+    cta: (
+      <Button size={'sm'} variant={'ghost'} className="cursor-pointer">
+        <Link href={'#'}>Learn More</Link>
+      </Button>
+    ),
     background: (
       <Calendar
         mode="single"
@@ -98,7 +114,6 @@ const BentoCard = ({
   background,
   Icon,
   description,
-  href,
   cta,
   HeaderComponent,
 }: {
@@ -107,8 +122,8 @@ const BentoCard = ({
   background: ReactNode;
   Icon?: any;
   description?: string | React.ReactNode;
-  href: string;
-  cta: string;
+
+  cta: ReactNode;
   HeaderComponent?: React.ReactNode;
 }) => (
   <div
@@ -120,7 +135,7 @@ const BentoCard = ({
     )}
   >
     <div>{background}</div>
-    <div className="pointer-events-none z-10 flex flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
+    <div className="pointer-events-none z-10 flex flex-col justify-start items-start gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
       {Icon && (
         <Icon className="h-12 w-auto mr-auto origin-left text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
       )}
@@ -138,17 +153,7 @@ const BentoCard = ({
         'absolute bottom-0 flex w-full translate-y-10 flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100',
       )}
     >
-      <Link
-        href={href}
-        className={buttonVariants({
-          size: 'sm',
-          variant: 'ghost',
-          className: 'cursor-pointer',
-        })}
-      >
-        {cta}
-        <ArrowRightIcon className="ml-2 h-4 w-4" />
-      </Link>
+      {cta}
     </div>
     <div className="pointer-events-none absolute inset-0 transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
   </div>
