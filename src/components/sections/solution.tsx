@@ -1,11 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import AnimationContainer from '../global/animation-container';
-import AvatarGroup from '../global/avatar-group';
 import Checklist from '../global/checklist';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import { BentoCard, BentoGrid } from '../ui/bento-grid';
 import { Button } from '../ui/button';
-import { Calendar } from '../ui/calendar';
 import MagicBadge from '../ui/magic-badge';
 
 function Solution() {
@@ -23,21 +22,6 @@ function Solution() {
         <BentoGrid className="py-8 grid-cols-2">
           <BentoCard
             className="col-span-1"
-            HeaderComponent={
-              <AvatarGroup
-                group={[
-                  { name: 'Jessica', src: '/assets/manager-1.jpg' },
-                  { name: 'Jessica', src: '/assets/manager-2.jpg' },
-                  { name: 'Jessica', src: '/assets/manager-3.jpg' },
-                ]}
-                extra={
-                  <p className="px-2 text-muted-foreground text-xs">
-                    Trusted by <strong className="font-medium text-foreground">2K+</strong>{' '}
-                    Managers.
-                  </p>
-                }
-              />
-            }
             description={
               <Checklist list={['Prepares 1:1s', 'Highlights Priorities', 'Coaches In Context']} />
             }
@@ -48,31 +32,17 @@ function Solution() {
               </Button>
             }
             background={
-              <Calendar
-                mode="single"
-                selected={new Date(2022, 4, 11, 0, 0, 0)}
-                className="absolute right-0 top-10 origin-top rounded-md border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+              <Image
+                src={'/app_images/managers-graph.png'}
+                alt="Suggestions For Managers"
+                height={352}
+                width={552}
+                className="absolute left-0 -top-16 origin-top rounded-md border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_60%)] group-hover:scale-105"
               />
             }
           />
           <BentoCard
             className="col-span-1"
-            HeaderComponent={
-              <AvatarGroup
-                group={[
-                  { name: 'Jessica', src: '/assets/HR1.jpg' },
-                  { name: 'Lisa', src: '/assets/HR2.jpg' },
-                  { name: 'Jessica', src: '/assets/HR3.jpg' },
-                  { name: 'Jessica', src: '/assets/manager-4.jpg' },
-                ]}
-                extra={
-                  <p className="px-2 text-muted-foreground text-xs">
-                    Trusted by <strong className="font-medium text-foreground">1.5K+</strong> HR
-                    Leaders.
-                  </p>
-                }
-              />
-            }
             description={
               <Checklist
                 list={['Provides Behavioural Insights', 'Maturity Trends', 'Measurable ROI']}
@@ -85,10 +55,12 @@ function Solution() {
               </Button>
             }
             background={
-              <Calendar
-                mode="single"
-                selected={new Date(2022, 4, 11, 0, 0, 0)}
-                className="absolute right-0 top-10 origin-top rounded-md border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:scale-105"
+              <Image
+                src={'/app_images/HR-graphs.png'}
+                alt="Analytics For HRs"
+                height={352}
+                width={552}
+                className="absolute right-0 -top-2 origin-top rounded-md border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_20%,#000_60%)] group-hover:scale-105"
               />
             }
           />
