@@ -1,3 +1,4 @@
+import { cn } from '@/utils';
 import { ReactNode } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
@@ -9,11 +10,17 @@ interface Person {
 export interface AvatarGroupProps {
   group: Person[];
   extra?: ReactNode;
+  className?: string;
 }
 
-export default function AvatarGroup({ group, extra }: AvatarGroupProps) {
+export default function AvatarGroup({ group, extra, className }: AvatarGroupProps) {
   return (
-    <div className="flex items-center rounded-full border bg-background p-1 w-auto justify-start">
+    <div
+      className={cn(
+        'flex items-center rounded-full border bg-background p-1 w-auto justify-start',
+        className,
+      )}
+    >
       <div className="-space-x-[0.6rem] flex">
         {group.map((person) => {
           return (
