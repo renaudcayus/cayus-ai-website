@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="flex flex-col items-start justify-start md:max-w-[200px]">
             <div className="flex items-start">
               <Image
-                src={'/logos/cayus-logo-full.png'}
+                src={'/logos/cayus-logo-full.svg'}
                 width={100}
                 height={80}
                 alt="Cayus Icon Logo"
