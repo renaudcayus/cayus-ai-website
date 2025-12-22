@@ -48,12 +48,7 @@ const Navbar = () => {
         <MaxWidthWrapper className="flex items-center justify-between z-10">
           <div className="flex items-center space-x-12">
             <Link href="/#home">
-              <Image
-                src={'/logos/cayus-logo-fullx150.png'}
-                width={110}
-                height={30}
-                alt="Cayus Logo"
-              />
+              <Image src={'/logos/cayus-logo-full.svg'} width={110} height={30} alt="Cayus Logo" />
             </Link>
 
             <NavigationMenu className="hidden lg:flex">
