@@ -33,7 +33,7 @@ function Solution() {
             }
             background={
               <Image
-                src={'/app_images/managers-graph.png'}
+                src={'/app_images/managers-graph-2.png'}
                 alt="Suggestions For Managers"
                 height={352}
                 width={552}
