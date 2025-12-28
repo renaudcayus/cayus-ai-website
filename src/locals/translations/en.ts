@@ -1,8 +1,8 @@
 const hero = {
-  'hero.title': 'Smart Links with',
-  'hero.highlight': 'Precision',
-  'hero.para_r1': `Effortlessly streamline your link management with Cayus.`,
-  'hero.para_r2': `Shorten, track, and organize all your links in one place.`,
+  'hero.title': 'Execution Meets,',
+  'hero.highlight': 'Intelligence',
+  'hero.para_r1': `Meet Cayus AI, your intelligent chief of staff,`,
+  'hero.para_r2': `that lives right inside your existing workflow.`,
 };
 
 const getStarted = {
