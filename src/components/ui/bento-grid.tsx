@@ -4,7 +4,7 @@ import { Command } from '@/components/ui/command';
 import { cn } from '@/utils';
 import { ArrowRightIcon, CalendarIcon, Link2Icon, SearchIcon, WaypointsIcon } from 'lucide-react';
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './card';
 import { Input } from './input';
 import { Integrations } from './integrations';
@@ -100,14 +100,16 @@ const BentoCard = ({
   description,
   href,
   cta,
+  HeaderComponent,
 }: {
   name: string;
-  className: string;
+  className?: string;
   background: ReactNode;
-  Icon: any;
-  description: string;
+  Icon?: any;
+  description?: string | React.ReactNode;
   href: string;
   cta: string;
+  HeaderComponent?: React.ReactNode;
 }) => (
   <div
     key={name}
@@ -119,9 +121,16 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <div className="pointer-events-none z-10 flex flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-      <Icon className="h-12 w-12 origin-left text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
+      {Icon && (
+        <Icon className="h-12 w-auto mr-auto origin-left text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
+      )}
+      {HeaderComponent}
       <h3 className="text-xl font-semibold text-neutral-500">{name}</h3>
-      <p className="max-w-lg text-neutral-400">{description}</p>
+      {typeof description === 'string' ? (
+        <p className="max-w-lg text-neutral-400">{description}</p>
+      ) : (
+        description
+      )}
     </div>
 
     <div
