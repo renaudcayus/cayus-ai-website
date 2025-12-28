@@ -1,5 +1,5 @@
 import { getScopedI18n } from '@/locals/server';
-import { BarChart3Icon, FolderOpenIcon, WandSparklesIcon } from 'lucide-react';
+import { BrainCircuit, Hourglass, Layers3 } from 'lucide-react';
 import CardWithIcon from '../cards/card-with-icon';
 import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
@@ -27,19 +27,19 @@ async function TheProblem() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-8 gap-4 md:gap-8">
         <CardWithIcon
           index={1}
-          Icon={FolderOpenIcon}
+          Icon={Hourglass}
           title={cardT('1.title')}
           description={cardT('1.description')}
         />
         <CardWithIcon
           index={2}
-          Icon={WandSparklesIcon}
+          Icon={Layers3}
           title={cardT('2.title')}
           description={cardT('2.description')}
         />
         <CardWithIcon
           index={3}
-          Icon={BarChart3Icon}
+          Icon={BrainCircuit}
           title={cardT('3.title')}
           description={cardT('3.description')}
         />
