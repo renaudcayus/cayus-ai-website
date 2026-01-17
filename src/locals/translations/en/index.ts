@@ -5,6 +5,7 @@ import { getStarted } from './get-started';
 import { hero } from './hero';
 import { navbar } from './navbar';
 import { problem } from './problem';
+import { trustedBy } from './trusted-by';
 
 const enTranslation = {
   ...navbar,
@@ -14,6 +15,7 @@ const enTranslation = {
   ...features,
   ...aboutUs,
   ...cta,
+  ...trustedBy,
 };
 
 export default enTranslation;
