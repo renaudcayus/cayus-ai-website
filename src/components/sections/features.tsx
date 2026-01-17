@@ -11,7 +11,7 @@ async function Features() {
     <MaxWidthWrapper className="pt-10">
       <AnimationContainer delay={0.1}>
         <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
-          <MagicBadge title="Features" />
+          <MagicBadge title={featuresT('badge')} />
           <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
             {featuresT('title')}
           </h2>
