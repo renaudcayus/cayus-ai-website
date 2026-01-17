@@ -6,9 +6,11 @@ import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
 
 async function TheProblem() {
-  const [scopedT, cardT] = await Promise.all([
+  const [scopedT, cardT1, cardT2, cardT3] = await Promise.all([
     getScopedI18n('problem'),
-    getScopedI18n('problem.card'),
+    getScopedI18n('problem.card.1'),
+    getScopedI18n('problem.card.2'),
+    getScopedI18n('problem.card.3'),
   ]);
 
   return (
@@ -28,20 +30,20 @@ async function TheProblem() {
         <CardWithIcon
           index={1}
           Icon={Hourglass}
-          title={cardT('1.title')}
-          description={cardT('1.description')}
+          title={cardT1('title')}
+          description={cardT1('description')}
         />
         <CardWithIcon
           index={2}
           Icon={Layers3}
-          title={cardT('2.title')}
-          description={cardT('2.description')}
+          title={cardT2('title')}
+          description={cardT2('description')}
         />
         <CardWithIcon
           index={3}
           Icon={BrainCircuit}
-          title={cardT('3.title')}
-          description={cardT('3.description')}
+          title={cardT3('title')}
+          description={cardT3('description')}
         />
       </div>
     </MaxWidthWrapper>
