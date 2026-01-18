@@ -1,6 +1,7 @@
 import { aboutUs } from './about-us';
 import { cta } from './cta';
 import { features } from './features';
+import { footer } from './footer';
 import { getStarted } from './get-started';
 import { hero } from './hero';
 import { navbar } from './navbar';
@@ -18,6 +19,7 @@ const enTranslation = {
   ...cta,
   ...trustedBy,
   ...testimonials,
+  ...footer,
 };
 
 export default enTranslation;
