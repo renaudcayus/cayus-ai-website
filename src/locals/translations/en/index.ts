@@ -5,6 +5,7 @@ import { getStarted } from './get-started';
 import { hero } from './hero';
 import { navbar } from './navbar';
 import { problem } from './problem';
+import { testimonials } from './testimonials';
 import { trustedBy } from './trusted-by';
 
 const enTranslation = {
@@ -16,6 +17,7 @@ const enTranslation = {
   ...aboutUs,
   ...cta,
   ...trustedBy,
+  ...testimonials,
 };
 
 export default enTranslation;

@@ -1,30 +1,35 @@
+import { getScopedI18n } from '@/locals/server';
 import { REVIEWS } from '@/utils/constants/misc';
 import ReviewCard from '../cards/review-card';
 import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
 
-function Testimonials() {
+async function Testimonials() {
+  const [testimonialT, cardsT] = await Promise.all([
+    getScopedI18n('testimonial'),
+    getScopedI18n('testimonial.card'),
+  ]);
   return (
     <MaxWidthWrapper className="py-10">
       <AnimationContainer delay={0.1}>
         <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-          <MagicBadge title="Our Customers" />
+          <MagicBadge title={testimonialT('badge')} />
           <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-            What our users are saying
+            {testimonialT('title')}
           </h2>
           <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-            Here&apos;s what some of our users have to say about Cayus.
+            {testimonialT('description')}
           </p>
         </div>
       </AnimationContainer>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-start gap-4 md:gap-8 py-10">
         <div className="flex flex-col items-start h-min gap-6">
-          {REVIEWS.slice(0, 3).map(({ name, username, rating, review }) => (
+          {REVIEWS.slice(0, 3).map(({ name, username, rating, review }, index) => (
             <ReviewCard
               name={name}
               username={username}
-              review={review}
+              review={cardsT('1')}
               rating={rating}
               key={username}
             />
@@ -35,7 +40,7 @@ function Testimonials() {
             <ReviewCard
               name={name}
               username={username}
-              review={review}
+              review={cardsT('1')}
               rating={rating}
               key={username}
             />
@@ -46,7 +51,7 @@ function Testimonials() {
             <ReviewCard
               name={name}
               username={username}
-              review={review}
+              review={cardsT('1')}
               rating={rating}
               key={username}
             />
