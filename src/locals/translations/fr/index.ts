@@ -1,4 +1,5 @@
 import { aboutUs } from './about-us';
+import { cta } from './cta';
 import { features } from './features';
 import { getStarted } from './getStarted';
 import { hero } from './hero';
@@ -16,6 +17,7 @@ const frTranslation = {
   ...trustedBy,
   ...features,
   ...testimonials,
+  ...cta,
 };
 
 export default frTranslation;
