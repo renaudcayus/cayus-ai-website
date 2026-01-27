@@ -2,6 +2,7 @@
 
 import { AnimatedBeam } from '@/components/ui/animated-beam';
 import { cn } from '@/utils';
+import Image from 'next/image';
 import React, { forwardRef, useRef } from 'react';
 import { Icons } from '../global/icons';
 
@@ -50,7 +51,7 @@ export function Integrations({ className }: { className?: string }) {
         </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div6Ref} className="h-16 w-16">
-            <Icons.openai className="h-6 w-6" />
+            <Image src={'/logos/cayus-logo-icon.svg'} width={50} height={50} alt="Cayus AI Icon" />
           </Circle>
         </div>
         <div className="flex flex-col justify-center gap-2">

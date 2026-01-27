@@ -16,7 +16,7 @@ function CardWithIcon({ index, Icon, title, description }: ICardWithIcon) {
           <Icon strokeWidth={1.5} className="w-10 h-10 text-foreground" />
           <div className="flex flex-col relative items-start">
             <span className="absolute -top-6 right-0 border-2 border-border text-foreground font-medium text-2xl rounded-full w-12 h-12 flex items-center justify-center pt-0.5">
-              {index + 1}
+              {index}
             </span>
             <h3 className="text-base mt-6 font-medium text-foreground">
               {/* The argument would be string key to get translation, i.e, 1.title, 2.title, and so on. */}

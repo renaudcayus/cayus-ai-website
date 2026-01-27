@@ -1,5 +1,4 @@
 'use client';
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,7 +8,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { cn, NAV_LINKS } from '@/utils';
+import { cn } from '@/utils';
 import { LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,8 +18,12 @@ import LangSelect from '../global/lang-select';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MobileNavbar from './mobile-navbar';
 
+import { useScopedI18n } from '@/locals/client';
+import { LineChartIcon, Link2Icon, LockIcon, QrCodeIcon } from 'lucide-react';
+
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
+  const scoptedT = useScopedI18n('navbar');
 
   const handleScroll = () => {
     if (window.scrollY > 8) {
@@ -36,6 +39,43 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const NAV_LINKS = [
+    {
+      title: scoptedT('features'),
+      href: '/features',
+      menu: [
+        {
+          title: 'Link Shortening',
+          tagline: 'Shorten links and track their performance.',
+          href: '/features/link-shortening',
+          icon: Link2Icon,
+        },
+        {
+          title: 'Password Protection',
+          tagline: 'Secure your links with a password.',
+          href: '/features/password-protection',
+          icon: LockIcon,
+        },
+        {
+          title: 'Advanced Analytics',
+          tagline: 'Gain insights into who is clicking your links.',
+          href: '/features/analytics',
+          icon: LineChartIcon,
+        },
+        {
+          title: 'Custom QR Codes',
+          tagline: 'Use QR codes to reach your audience.',
+          href: '/features/qr-codes',
+          icon: QrCodeIcon,
+        },
+      ],
+    },
+    {
+      title: scoptedT('faq'),
+      href: '/faq',
+    },
+  ];
 
   return (
     <header
@@ -62,12 +102,12 @@ const Navbar = () => {
                           <ul
                             className={cn(
                               'grid gap-1 p-4 md:w-[400px] lg:w-[500px] rounded-xl',
-                              link.title === 'Features'
+                              link.title === scoptedT('features')
                                 ? 'lg:grid-cols-[.75fr_1fr]'
                                 : 'lg:grid-cols-2',
                             )}
                           >
-                            {link.title === 'Features' && (
+                            {link.title === scoptedT('features') && (
                               <li className="row-span-4 pr-2 relative rounded-lg overflow-hidden">
                                 <div className="absolute inset-0 !z-10 h-full w-[calc(100%-10px)] bg-[linear-gradient(to_right,rgb(38,38,38,0.5)_1px,transparent_1px),linear-gradient(to_bottom,rgb(38,38,38,0.5)_1px,transparent_1px)] bg-[size:1rem_1rem]"></div>
                                 <NavigationMenuLink asChild className="z-20 relative">

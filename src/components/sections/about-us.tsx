@@ -15,7 +15,9 @@ async function AboutUs() {
             {aboutusT('title')}
           </h2>
           <p className="mt-8 text-lg text-muted-foreground leading-relaxed whitespace-pre-line text-center lg:text-center max-w-3xl">
-            {aboutusT('para')}
+            {aboutusT('para')} <br />
+            <b>{aboutusT('goal.title')}</b>
+            {aboutusT('goal.statement')}
           </p>
         </div>
       </AnimationContainer>

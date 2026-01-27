@@ -1,14 +1,16 @@
 import { getScopedI18n } from '@/locals/server';
-import { BarChart3Icon, FolderOpenIcon, WandSparklesIcon } from 'lucide-react';
+import { BrainCircuit, Hourglass, Layers3 } from 'lucide-react';
 import CardWithIcon from '../cards/card-with-icon';
 import AnimationContainer from '../global/animation-container';
 import MaxWidthWrapper from '../global/max-width-wrapper';
 import MagicBadge from '../ui/magic-badge';
 
 async function TheProblem() {
-  const [scopedT, cardT] = await Promise.all([
+  const [scopedT, cardT1, cardT2, cardT3] = await Promise.all([
     getScopedI18n('problem'),
-    getScopedI18n('problem.card'),
+    getScopedI18n('problem.card.1'),
+    getScopedI18n('problem.card.2'),
+    getScopedI18n('problem.card.3'),
   ]);
 
   return (
@@ -27,21 +29,21 @@ async function TheProblem() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-8 gap-4 md:gap-8">
         <CardWithIcon
           index={1}
-          Icon={FolderOpenIcon}
-          title={cardT('1.title')}
-          description={cardT('1.description')}
+          Icon={Hourglass}
+          title={cardT1('title')}
+          description={cardT1('description')}
         />
         <CardWithIcon
           index={2}
-          Icon={WandSparklesIcon}
-          title={cardT('2.title')}
-          description={cardT('2.description')}
+          Icon={Layers3}
+          title={cardT2('title')}
+          description={cardT2('description')}
         />
         <CardWithIcon
           index={3}
-          Icon={BarChart3Icon}
-          title={cardT('3.title')}
-          description={cardT('3.description')}
+          Icon={BrainCircuit}
+          title={cardT3('title')}
+          description={cardT3('description')}
         />
       </div>
     </MaxWidthWrapper>

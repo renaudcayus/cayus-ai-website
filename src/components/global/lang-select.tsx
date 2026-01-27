@@ -28,7 +28,7 @@ export default function LangSelect() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="en">English</SelectItem>
-          <SelectItem value="fr">French</SelectItem>
+          <SelectItem value="fr">Français</SelectItem>
         </SelectContent>
       </Select>
     </div>

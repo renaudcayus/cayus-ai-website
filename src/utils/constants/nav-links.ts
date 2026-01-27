@@ -1,11 +1,4 @@
-import {
-  HelpCircleIcon,
-  LineChartIcon,
-  Link2Icon,
-  LockIcon,
-  NewspaperIcon,
-  QrCodeIcon,
-} from 'lucide-react';
+import { LineChartIcon, Link2Icon, LockIcon, QrCodeIcon } from 'lucide-react';
 
 export const NAV_LINKS = [
   {

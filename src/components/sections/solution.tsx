@@ -1,3 +1,4 @@
+import { getScopedI18n } from '@/locals/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimationContainer from '../global/animation-container';
@@ -7,14 +8,19 @@ import { BentoCard, BentoGrid } from '../ui/bento-grid';
 import { Button } from '../ui/button';
 import MagicBadge from '../ui/magic-badge';
 
-function Solution() {
+async function Solution() {
+  const [scopedT, scopedTManagers, scoptedTHR] = await Promise.all([
+    getScopedI18n('solution'),
+    getScopedI18n('solution.manager'),
+    getScopedI18n('solution.hr'),
+  ]);
   return (
     <MaxWidthWrapper className="pt-10">
       <AnimationContainer delay={0.1}>
         <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
-          <MagicBadge title="Solution" />
-          <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-            From conversations to insights <br /> — without adding another tool.
+          <MagicBadge title={scopedT('badge')} />
+          <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6 max-w-[45rem]">
+            {scopedT('title')}
           </h2>
         </div>
       </AnimationContainer>
@@ -23,12 +29,18 @@ function Solution() {
           <BentoCard
             className="col-span-1"
             description={
-              <Checklist list={['Prepares 1:1s', 'Highlights Priorities', 'Coaches In Context']} />
+              <Checklist
+                list={[
+                  scopedTManagers('list.1'),
+                  scopedTManagers('list.2'),
+                  scopedTManagers('list.3'),
+                ]}
+              />
             }
-            name="For Managers"
+            name={scopedTManagers('title')}
             cta={
               <Button variant={'primary'} asChild>
-                <Link href={'#'}>Try Now</Link>
+                <Link href={'#'}>{scopedTManagers('cta')}</Link>
               </Button>
             }
             background={
@@ -45,13 +57,13 @@ function Solution() {
             className="col-span-1"
             description={
               <Checklist
-                list={['Provides Behavioural Insights', 'Maturity Trends', 'Measurable ROI']}
+                list={[scoptedTHR('list.1'), scoptedTHR('list.2'), scoptedTHR('list.3')]}
               />
             }
-            name="For HR Leaders"
+            name={scoptedTHR('title')}
             cta={
               <Button variant={'primary'} asChild>
-                <Link href={'#'}>Try Now</Link>
+                <Link href={'#'}>{scoptedTHR('cta')}</Link>
               </Button>
             }
             background={

@@ -1,9 +1,11 @@
 import { AnimationContainer } from '@/components';
 import { TextHoverEffect } from '@/components/ui/text-hover-effect';
+import { getScopedI18n } from '@/locals/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = async () => {
+  const footerT = await getScopedI18n('footer');
   return (
     <footer className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 md:pb-0 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(colors.neutral.500/20%),transparent)]">
       <div className="absolute top-0 left-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-1.5 bg-foreground rounded-full"></div>
@@ -19,14 +21,22 @@ const Footer = () => {
                 alt="Cayus Icon Logo"
               />
             </div>
-            <p className="text-muted-foreground mt-4 text-sm text-start">
-              Manage your links with ease.
-            </p>
-            <span className="mt-4 text-neutral-500 text-sm flex items-center">
-              Made by{' '}
-              <Link href="https://shreyas-sihasane.vercel.app/" className="font-semibold ml-1">
-                Shreyas
-              </Link>
+            <p className="text-muted-foreground mt-4 text-sm text-start">{footerT('tagline')}</p>
+            <span className="mt-4 text-neutral-500 text-sm flex items-start flex-col">
+              {footerT('madeby')}
+              <span>
+                <Link href="https://heyshreyas.in/" className="font-semibold ml-1">
+                  Shreyas
+                </Link>
+                ,{' '}
+                <Link href="https://www.spiderly.dev/" className="font-semibold ml-1">
+                  Filip
+                </Link>{' '}
+                &
+                <Link href="https://www.arfadev.com" className="font-semibold ml-1">
+                  Umar
+                </Link>
+              </span>
             </span>
           </div>
         </AnimationContainer>

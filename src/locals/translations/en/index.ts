@@ -1,0 +1,27 @@
+import { aboutUs } from './about-us';
+import { cta } from './cta';
+import { features } from './features';
+import { footer } from './footer';
+import { getStarted } from './get-started';
+import { hero } from './hero';
+import { navbar } from './navbar';
+import { problem } from './problem';
+import { solution } from './solution';
+import { testimonials } from './testimonials';
+import { trustedBy } from './trusted-by';
+
+const enTranslation = {
+  ...navbar,
+  ...hero,
+  ...getStarted,
+  ...problem,
+  ...solution,
+  ...features,
+  ...aboutUs,
+  ...cta,
+  ...trustedBy,
+  ...testimonials,
+  ...footer,
+};
+
+export default enTranslation;

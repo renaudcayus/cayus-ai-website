@@ -18,13 +18,12 @@ const contactFormSchema = z.object({
 
 const EmailCTA = () => {
   const { pending } = useFormStatus();
+  const scopedT = useScopedI18n('getStarted');
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: { email: '' },
   });
-
-  const scopedT = useScopedI18n('getStarted.message');
 
   async function handleSubmit(values: z.infer<typeof contactFormSchema>) {
     const { status, data, message } = await sendContactEmail({ email: values.email });
@@ -32,9 +31,9 @@ const EmailCTA = () => {
     form.reset();
 
     if (status === 'success') {
-      toast.success(scopedT('success'));
+      toast.success(scopedT('message.success'));
     } else {
-      toast.error(message ?? 'Failed to send email.');
+      toast.error(message ?? scopedT('message.error'));
     }
   }
 
@@ -52,7 +51,7 @@ const EmailCTA = () => {
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="Your email address"
+                    placeholder={scopedT('input.placeholder')}
                     className={cn(
                       ' rounded-full w-full ',
                       form.formState.errors.email
@@ -71,7 +70,7 @@ const EmailCTA = () => {
             className="rounded-full border border-foreground/20"
             disabled={pending}
           >
-            Get Started
+            {scopedT('cta.title')}
             <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
         </form>
